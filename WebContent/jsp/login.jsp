@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-<jsp:include page="/mainBanner.jsp" />
+<jsp:include page="mainBanner.jsp" />
 
 <head>
 	<meta charset="utf-8">

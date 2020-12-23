@@ -99,11 +99,11 @@
                   <div class="header_box">
                      <div class="login_menu">
                         <ul>
-                           <li><a href="#">
+                           <li><a href="<%=request.getContextPath() %>/jsp/signUp.jsp">
                                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                  <span class="padding_10">SIGNUP</span></a>
                            </li>
-                           <li><a href="login.jsp">
+                           <li><a href="<%=request.getContextPath() %>/jsp/login.jsp">
                                  <i class="fa fa-user" aria-hidden="true"></i>
                                  <span class="padding_10">LOGIN</span></a>
                            </li>
