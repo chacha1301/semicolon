@@ -3,11 +3,17 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>login.jsp</title>
-</head>
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<head>
+	<meta charset="UTF-8">
+	<title>login.jsp</title>
+</head>
+
+<body>
+	<div>
+		<h2>로그인</h2>
+	</div>
 </body>
+
 </html>
