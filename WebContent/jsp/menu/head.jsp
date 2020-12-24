@@ -175,6 +175,7 @@
 			<!-- banner section end -->
 		</div>
 	</div>
+	
 	<script>
 		function openNav() {
 			document.getElementById("mySidenav").style.width = "250px";

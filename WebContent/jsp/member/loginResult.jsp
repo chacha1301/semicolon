@@ -4,14 +4,17 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="/jsp/menu/head.jsp" />
-
 <head>
 	<meta charset="UTF-8">
-	<title>eduMain.jsp</title>
+	<title>loginResult.jsp</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
-	
+	<div align="center">
+		<c:if test="${auth ne null }">
+			<h3>${vo.memberName } 님 환영합니다.</h3>
+		</c:if>
+	</div>	
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 

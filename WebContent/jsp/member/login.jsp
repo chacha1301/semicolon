@@ -25,7 +25,7 @@
 					<div class="card">
 						<div class="card-header">LOGIN</div>
 						<div class="card-body">
-							<form action="" method="">
+							<form action="/SemiColon/Login.do" method="post">
 								<div class="form-group row">
 									<label for="email_address" class="col-md-4 col-form-label text-md-right">ID
 									</label>
@@ -45,16 +45,15 @@
 								</div>
 								<div class="col-md-6 offset-md-4">
 									<button type="submit" class="btn btn-primary">LOGIN</button>
-									<a href="/jsp/member/signUp.jsp" class="btn btn-link">
-										아직 세미콜론 회원이 아니신가요? </a>
+									<a href="signUp.jsp" class="btn btn-link">아직 세미콜론 회원이 아니신가요?</a>
 								</div>
-						</div>
 						</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
+		
 
 	</main>
 
