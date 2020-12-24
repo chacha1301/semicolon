@@ -31,7 +31,7 @@
 									</label>
 									<div class="col-md-6">
 										<input type="text" id="email_address" class="form-control"
-											name="email-address" placeholder="아이디 입력" required autofocus>
+											name="mid" placeholder="아이디 입력" required autofocus>
 									</div>
 								</div>
 
