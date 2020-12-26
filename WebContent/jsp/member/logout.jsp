@@ -23,7 +23,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 					<div class="card">
-						<div class="card-header">${mid } 님 가입이 완료되었습니다. 로그인 해주세요.</div>
+						<div class="card-header">${name } 님 성공적으로 로그아웃되었습니다.</div>
 						<div class="card-body">
 							<form action="/SemiColon/SemiLogin.do" method="post">
 								<div class="form-group row">
@@ -44,6 +44,7 @@
 								</div>
 								<div class="col-md-6 offset-md-4">
 									<button type="submit" class="btn btn-primary">LOGIN</button>
+									<a href="signUp.jsp" class="btn btn-link">아직 세미콜론 회원이 아니신가요?</a>
 								</div>
 							</form>
 						</div>

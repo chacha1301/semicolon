@@ -23,37 +23,36 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 					<div class="card">
-						<div class="card-header">LOGIN</div>
+						<div class="card-header">로그인 해주세요.</div>
 						<div class="card-body">
-							<form action="/SemiColon/Login.do" method="post">
+							<form action="/SemiColon/SemiLogin.do" method="post">
 								<div class="form-group row">
 									<label for="email_address" class="col-md-4 col-form-label text-md-right">ID
 									</label>
 									<div class="col-md-6">
-										<input type="text" id="email_address" class="form-control"
-											name="mid" placeholder="아이디 입력" required autofocus>
+										<input type="text" id="email_address" class="form-control" name="mid"
+											placeholder="아이디 입력" required autofocus>
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label for="password"
-										class="col-md-4 col-form-label text-md-right">Password</label>
+									<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 									<div class="col-md-6">
-										<input type="password" id="password" class="form-control"
-											name="password" placeholder="비밀번호 입력" required>
+										<input type="password" id="password" class="form-control" name="password"
+											placeholder="비밀번호 입력" required>
 									</div>
 								</div>
 								<div class="col-md-6 offset-md-4">
 									<button type="submit" class="btn btn-primary">LOGIN</button>
 									<a href="signUp.jsp" class="btn btn-link">아직 세미콜론 회원이 아니신가요?</a>
 								</div>
-						</form>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 
 	</main>
 

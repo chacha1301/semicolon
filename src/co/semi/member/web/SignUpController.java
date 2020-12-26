@@ -48,7 +48,6 @@ public class SignUpController extends HttpServlet {
 			// dispatcher를 사용할 경우 절대경로로 넘어가지 않는다.
 			// sendRedirect 로 넘길 때 request를 가져가지 못한다.
 		} else {
-			String msg = "가입을 완료하지 못하였습니다.";
 			PrintWriter out = response.getWriter();
 			out.println(
 					"<script>alert('가입을 완료하지 못하였습니다.'); location.href='/SemiColon/jsp/member/signUp.jsp; </script>");

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import co.semi.dao.MemberDAO;
 import co.semi.vo.MemberVO;
 
-@WebServlet("/Login.do")
+@WebServlet("/SemiLogin.do")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,7 +41,10 @@ public class LoginController extends HttpServlet {
 		
 		request.setAttribute("vo", vo);
 		
-		String viewPage = "jsp/member/loginResult.jsp";
+		String msg = "님 환영합니다.";
+		request.setAttribute("msg", msg);
+		
+		String viewPage = "/jsp/menu/head.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
