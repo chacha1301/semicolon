@@ -39,6 +39,7 @@ public class LoginController extends HttpServlet {
 			session.setAttribute("name", vo.getMemberName());
 		}
 		
+		
 		request.setAttribute("vo", vo);
 		
 		String msg = "님 환영합니다.";

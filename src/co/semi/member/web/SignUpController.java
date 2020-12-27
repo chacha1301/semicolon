@@ -30,8 +30,6 @@ public class SignUpController extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
 
-		HttpSession session = request.getSession();
-
 		vo.setMemberName(request.getParameter("name"));
 		vo.setMemberId(request.getParameter("mid"));
 		vo.setPassword(request.getParameter("password"));

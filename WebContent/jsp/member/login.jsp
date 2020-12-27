@@ -18,6 +18,14 @@
 </head>
 
 <body>
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+	</div>
 	<main class="login-form">
 		<div class="cotainer">
 			<div class="row justify-content-center">
@@ -52,10 +60,15 @@
 				</div>
 			</div>
 		</div>
-
-
 	</main>
-
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 

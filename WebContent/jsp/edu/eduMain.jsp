@@ -11,7 +11,27 @@
 </head>
 
 <body>
-	
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
+	</div>
+
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
+	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 

@@ -18,17 +18,26 @@
 </head>
 
 <body>
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
+	</div>
 	<main class="login-form">
 		<div class="cotainer">
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 					<div class="card">
-						<div class="card-header">${name } 님 성공적으로 로그아웃되었습니다.</div>
+						<div class="card-header">${name }님 성공적으로 로그아웃되었습니다.</div>
 						<div class="card-body">
 							<form action="/SemiColon/SemiLogin.do" method="post">
 								<div class="form-group row">
-									<label for="email_address" class="col-md-4 col-form-label text-md-right">ID
-									</label>
+									<label for="email_address" class="col-md-4 col-form-label text-md-right">ID </label>
 									<div class="col-md-6">
 										<input type="text" id="email_address" class="form-control" name="mid"
 											placeholder="아이디 입력" required autofocus>
@@ -44,7 +53,8 @@
 								</div>
 								<div class="col-md-6 offset-md-4">
 									<button type="submit" class="btn btn-primary">LOGIN</button>
-									<a href="signUp.jsp" class="btn btn-link">아직 세미콜론 회원이 아니신가요?</a>
+									<a href="signUp.jsp" class="btn btn-link">아직 세미콜론 회원이
+										아니신가요?</a>
 								</div>
 							</form>
 						</div>
@@ -52,10 +62,17 @@
 				</div>
 			</div>
 		</div>
-
-
 	</main>
-
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
+	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 

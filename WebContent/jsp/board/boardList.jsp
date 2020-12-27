@@ -12,73 +12,158 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
+<style>
+	.select,
+	.search,
+	.submit {
+		border-radius: 5px
+	}
+
+	tr.rows:hover {
+		background: pink;
+	}
+</style>
 
 <body>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet'
-		type='text/css'>
-	<div class="container">
-		<div class="row">
-		<p><p/><p><p/>
-		<p><p/>
-			<div class="col-md-10 col-md-offset-1">
-				<div class="panel panel-default panel-table">
-					<div class="panel-heading">
-						<div class="row">
-							<div class="col col-xs-6">
-								<h3 class="panel-title">QnA</h3>
-							</div>
-
-						</div>
-					</div>
-					<div class="panel-body">
-						<table class="table table-striped table-bordered table-list">
-							<thead>
-								<tr>
-									<th><em class="fa fa-cog"></em></th>
-									<th class="hidden-xs">ID</th>
-									<th>Name</th>
-									<th>Email</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td align="center"><a class="btn btn-default"><em
-												class="fa fa-pencil"></em></a> <a class="btn btn-danger"><em
-												class="fa fa-trash"></em></a></td>
-									<td class="hidden-xs">1</td>
-									<td>John Doe</td>
-									<td>johndoe@example.com</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="panel-footer">
-						<div class="row">
-							<div class="col col-xs-4">Page 1 of 5</div>
-							<div class="col col-xs-8">
-								<ul class="pagination hidden-xs pull-right">
-									<li><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-								</ul>
-								<ul class="pagination visible-xs pull-right">
-									<li><a href="#">«</a></li>
-									<li><a href="#">»</a></li>
-								</ul>
-							</div>
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<form id="frm" name="frm" action="BoardList.do" method="post">
+				<select id="opt" name="opt" class="opt">
+					<c:choose>
+						<c:when test="${opt eq 'memberid'}">
+							<option value="memberid" selected>ID</option>
+						</c:when>
+						<c:otherwise>
+							<option value="memberid">ID</option>
+						</c:otherwise>
+					</c:choose>
+					<c:choose>
+						<c:when test="${opt eq 'boardtitle'}">
+							<option value="boardtitle" selected>TITLE</option>
+						</c:when>
+						<c:otherwise>
+							<option value="boardtitle">TITLE</option>
+						</c:otherwise>
+					</c:choose>
+					<c:choose>
+						<c:when test="${opt eq 'boardcontent'}">
+							<option value="boardcontent" selected>CONTENT</option>
+						</c:when>
+						<c:otherwise>
+							<option value="boardcontent">CONTENT</option>
+						</c:otherwise>
+					</c:choose>
+				</select>&nbsp;&nbsp; <input type="text" size="20" id="search" name="search" class="search">&nbsp;&nbsp;
+				<input type="submit" value="검색" class="submit">
+			</form>
+			<p></p>
+			<div class="panel panel-default panel-table">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col col-xs-6">
+							<h3 class="panel-title">QnA</h3>
 						</div>
 					</div>
 				</div>
-				<div class="col col-xs-6 text-right">
-					<button type="button" class="btn btn-sm btn-primary btn-create">Create
-						New</button>
-				</div><br><br><br><br><br>
-			</div>
-		</div>
-	</div>
+				<div class="panel-body">
+					<table class="table table-striped table-bordered table-list">
+						<thead>
+							<tr>
+								<th>질문</th>
+								<th>작성자 ID</th>
+								<th>작성일자</th>
+								<th>조회수</th>
+								<th><em class="fa fa-cog"></em></th>
+							</tr>
+						</thead>
+						<c:forEach var="vo" items="${list }">
+							<tbody>
+								<tr class="rows">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+										${vo.boardtitle}</td>
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+										${vo.memberid}</td>
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+										${vo.boarddate }</td>
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+										${vo.boardhit }</td>
+									<td align="center">
+										<c:if test="${vo.memberid eq session_id }">
+											<a class="btn btn-default" onclick="location.href='/SemiColon/BoardEditBefore.do?id=${vo.memberid}'"> <em class="fa fa-pencil"></em></a>
+											<a class="btn btn-danger" onclick="location.href='/SemiColon/BoardDelete.do?id=${vo.memberid}'"><em class="fa fa-trash"></em></a>
+										</c:if>
+									</td>
+								</tr>
+							</tbody>
+						</c:forEach>
+					</table>
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col col-xs-4">TotalPage ${totalCount }</div>
+						<div class="col col-xs-8">
+							<ul class="pagination hidden-xs pull-right">
+								<li><a href="javascript:goPage(${params.finalPageNo})">>></a></li>
+							</ul>
+							<ul class="pagination hidden-xs pull-right">
+								<li><a href="javascript:goPage(${params.nextPageNo})">></a></li>
+							</ul>
+							<ul class="pagination hidden-xs pull-right">
+								<c:forEach var="i" begin="${params.startPageNo}" end="${params.endPageNo}" step="1">
+									<c:choose>
+										<c:when test="${i eq params.pageNo}">
+											<li><a href="javascript:goPage(${i})">${i}</a></li>
+										</c:when>
+										<c:otherwise>
+											<li><a href="javascript:goPage(${i})">${i}</a></li>
+										</c:otherwise>
+									</c:choose>
+								</c:forEach>
+							</ul>
+							<ul class="pagination hidden-xs pull-right">
+								<li><a href="javascript:goPage(${params.prevPageNo})">
+										<</a> </li> </ul> <ul class="pagination hidden-xs pull-right">
+								<li><a href="javascript:goPage(${params.firstPageNo})">
+										<<</a> </li> </ul> </div> </div> </div> </div> <c:if test="${auth ne null }">
+											<div align="center">
+												<button type="button" class="btn btn-sm btn-primary btn-create"
+													onclick="location.href='/SemiColon/jsp/board/boardNew.jsp?id=${vo.memberid}'">Create
+													New</button>
+											</div>
+											</c:if>
+											<div align="center">
+												<p>&nbsp;
+													<p />
+													<p>&nbsp;
+														<p />
+														<p>&nbsp;
+															<p />
+															<p>&nbsp;
+																<p />
+																<p>&nbsp;
+																	<p />
+											</div>
+						</div>
+					</div>
+					<script>
+						function goPage(page) {
+							let opt = document.getElementById("opt").value;
+							let search = document.getElementById("search").value;
 
+							location.href = "BoardList.do?pageNum=" + page + "&opt=" + opt +
+								"&search=" + search;
+						}
+					</script>
 
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />

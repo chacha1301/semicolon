@@ -96,7 +96,14 @@
 </head>
 
 <body>
-
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+	</div>
 	<main class="login-form">
 		<div class="cotainer">
 			<div class="row justify-content-center">
@@ -110,8 +117,8 @@
 									<label for="email_address" class="col-md-4 col-form-label text-md-right">ID </label>
 									<div class="col-md-6">
 										<input type="text" class="form-control" placeholder="아이디 입력" id="mid" name="mid"
-											required autofocus>
-										<input type="button" value="중복확인" onclick="idDuplicationCheck()">
+											required autofocus> <input type="button" value="중복확인"
+											onclick="idDuplicationCheck()">
 									</div>
 								</div>
 
@@ -150,10 +157,16 @@
 				</div>
 			</div>
 		</div>
-		</div>
 
 	</main>
-
+	<div align="center">
+		<p>&nbsp;
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 
