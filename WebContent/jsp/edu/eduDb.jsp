@@ -4,11 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<title>db</title>
 </head>
 <jsp:include page="/jsp/menu/head.jsp" />
 <body>
-<jsp:include page="/jsp/menu/main.jsp" />	
+
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
 </html>

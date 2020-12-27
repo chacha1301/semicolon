@@ -11,9 +11,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <title>Semicolon</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
@@ -70,7 +67,8 @@
 						<div class="col-sm-12">
 							<div class="logo">
 								<a href="/SemiColon/index.jsp"><img
-									src="<%=request.getContextPath()%>/images/logo.png"></a>
+									src="<%=request.getContextPath()%>/images/icon.png"></a>
+								<h5 class="logo">semicolon</h5>
 							</div>
 						</div>
 					</div>
@@ -93,8 +91,8 @@
 								id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">강의들</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="#" name="develope">개발 · 프로그래밍</a>
-								<a class="dropdown-item" href="#" name="netword">보안 · 네트워크</a> <a
+								<a class="dropdown-item" href="<%=request.getContextPath()%>/jsp/edu/eduDev.jsp" id="develope" name="develope">개발 · 프로그래밍</a>
+								<a class="dropdown-item" href="<%=request.getContextPath()%>/EduListServ.do" id="network" name="network">보안 · 네트워크</a> <a
 									class="dropdown-item" href="#" name="database">데이터베이스</a> <a
 									class="dropdown-item" href="#" name="skill">업무 스킬</a> <a
 									class="dropdown-item" href="#" name="career">커리어</a> <a
@@ -132,9 +130,9 @@
 										</a></li>
 									</c:if>
 									<c:if test="${auth ne null }">
-										<li><a href="/SemiColon/Logout.do"> <i class="fa fa-user"
-												aria-hidden="true"></i> <span class="padding_10">LOGOUT</span></a>
-										</li>
+										<li><a href="/SemiColon/Logout.do"> <i
+												class="fa fa-user" aria-hidden="true"></i> <span
+												class="padding_10">LOGOUT</span></a></li>
 									</c:if>
 									<li><c:if test="${auth ne null }">
 											<span class="padding_10">${vo.memberName }</span>
@@ -156,7 +154,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">
-											Get Start <br>Your favriot shoping
+											Get Upgrade <br>Your IT skills
 										</h1>
 										<div class="buynow_bt">
 											<a href="#">Buy Now</a>
@@ -168,7 +166,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">
-											Get Start <br>Your favriot shoping
+											WakeUp <br>Your Potential
 										</h1>
 										<div class="buynow_bt">
 											<a href="#">Buy Now</a>
@@ -180,7 +178,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">
-											Get Start <br>Your favriot shoping
+											Be An Expert <br> From Now On
 										</h1>
 										<div class="buynow_bt">
 											<a href="#">Buy Now</a>
