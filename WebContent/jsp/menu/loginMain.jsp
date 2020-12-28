@@ -4,29 +4,12 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="/jsp/menu/head.jsp" />
-
 <head>
-	<meta charset="UTF-8">
-	<title>inputError.jsp</title>
+<meta charset="UTF-8">
+<title>eduMain.jsp</title>
 </head>
+<body>
 
-<body>z
-	<div align="center">
-		<p>&nbsp;
-			<p />
-			<p>&nbsp;
-				<p />
-	</div>
-	<div align="center">
-		<h2>${msg }</h2>
-	</div>
-	<div align="center">
-		<p>&nbsp;
-			<p />
-			<p>&nbsp;
-				<p />
-	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />
-
 </html>

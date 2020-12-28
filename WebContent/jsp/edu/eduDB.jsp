@@ -11,15 +11,14 @@
 </head>
 
 <body>
-<input type="hidden" id="database" name="database"
-		value="${vo.eduSubject}">
+	<input type="hidden" id="database" name="database" value="${vo.eduSubject}">
 	<div class="banner_section layout_padding">
 		<div class="fashion_section">
 			<div id="main_slider" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="container">
-							<h1 class="fashion_taital">DataBase    여기서 시작해 보세요! Ready!!</h1>
+							<h1 class="fashion_taital">DataBase 여기서 시작해 보세요! Ready!!</h1>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">

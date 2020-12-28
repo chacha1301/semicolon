@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<jsp:forward page="MainController"></jsp:forward>
+	<jsp:forward page="HomeController.do"></jsp:forward>
 </body>
 
 </html>

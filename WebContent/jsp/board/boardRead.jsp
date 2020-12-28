@@ -6,17 +6,18 @@
 <jsp:include page="/jsp/menu/head.jsp" />
 
 <head>
-<meta charset="UTF-8">
-<title>boardRead.jsp</title>
+	<meta charset="UTF-8">
+	<title>boardRead.jsp</title>
 </head>
 
 <body>
 	<div align="center">
 		<p>&nbsp;
-		<p />
-		<p>&nbsp;
-		<p />
-		<h1>QnA</h1>
+			<p />
+			<p>&nbsp;
+				<p />
+				<h1 style="font-size: 30px; font-weight: bold">QnA</h1>
+				
 	</div>
 
 	<section class="main-content  py-4 mb-5">
@@ -29,16 +30,16 @@
 								<div class="card-body">
 									<div class="row">
 										<div class="col-md-12" align="center">
-											<P>TITLE</P>
-											<h3>${vo.boardtitle }</h3>
+											<P style="font-size: 20px; font-weight: bold">TITLE</P>
+											<h4>${vo.boardtitle }</h4>
 											<br>
 											<hr>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12" align="center">
-											<P>CONTENT</p>
-											<h3>${vo.boardcontent }</h3>
+											<P style="font-size: 20px; font-weight: bold">CONTENT</p>
+											<h4>${vo.boardcontent }</h4>
 										</div>
 									</div>
 								</div>
@@ -49,8 +50,8 @@
 						<div class="col-md-12" align="center">
 							<div class="card">
 								<div class="card-body">
-									<P>WRITER</p>
-									<h3>${vo.memberid }</h3>
+									<P style="font-size: 20px; font-weight: bold">WRITER</p>
+									<h4>${vo.memberid }</h4>
 								</div>
 							</div>
 						</div>
@@ -59,17 +60,17 @@
 						<div class="col-md-12" align="center">
 							<div class="card">
 								<div class="card-body">
-									<P>DATE</p>
-									<h3>${vo.boarddate }</h3>
+									<P style="font-size: 20px; font-weight: bold">DATE</p>
+									<h4>${vo.boarddate }</h4>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div align="center">
 						<p>&nbsp;
-						<p />
-						<button type="button" class="btn btn-sm btn-primary btn-create"
-							onclick="location.href='/SemiColon/BoardList.do'">&nbsp;&nbsp;List&nbsp;&nbsp;</button>
+							<p />
+							<button type="button" class="btn btn-sm btn-primary btn-create"
+								onclick="location.href='/SemiColon/BoardList.do'">&nbsp;&nbsp;List&nbsp;&nbsp;</button>
 					</div>
 				</div>
 			</div>
@@ -77,13 +78,13 @@
 	</section>
 	<div align="center">
 		<p>&nbsp;
-		<p />
-		<p>&nbsp;
-		<p />
-		<p>&nbsp;
-		<p />
-		<p>&nbsp;
-		<p />
+			<p />
+			<p>&nbsp;
+				<p />
+				<p>&nbsp;
+					<p />
+					<p>&nbsp;
+						<p />
 	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />

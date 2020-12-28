@@ -6,13 +6,12 @@
 <jsp:include page="/jsp/menu/head.jsp" />
 
 <head>
-<meta charset="UTF-8">
-<title>커</title>
+	<meta charset="UTF-8">
+	<title>커</title>
 </head>
 
 <body>
-	<input type="hidden" id="career" name="career"
-		value="${vo.eduSubject}">
+	<input type="hidden" id="career" name="career" value="${vo.eduSubject}">
 
 	<div class="banner_section layout_padding">
 		<div class="fashion_section">
@@ -20,7 +19,7 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="container">
-							<h1 class="fashion_taital">Career    여기서 시작해 보세요!  ❤!!</h1>
+							<h1 class="fashion_taital">Career 여기서 시작해 보세요! ❤!!</h1>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">

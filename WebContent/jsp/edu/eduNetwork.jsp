@@ -6,20 +6,19 @@
 <jsp:include page="/jsp/menu/head.jsp" />
 
 <head>
-<meta charset="UTF-8">
-<title>넷</title>
+	<meta charset="UTF-8">
+	<title>넷</title>
 </head>
 
 <body>
-	<input type="hidden" id="network" name="network"
-		value="${vo.eduSubject}">
+	<input type="hidden" id="network" name="network" value="${vo.eduSubject}">
 	<div class="banner_section layout_padding">
 		<div class="fashion_section">
 			<div id="main_slider" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="container">
-							<h1 class="fashion_taital">Security · Network    여기서 시작해 보세요! Ready!!</h1>
+							<h1 class="fashion_taital">Security · Network 여기서 시작해 보세요! Ready!!</h1>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">

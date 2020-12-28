@@ -51,10 +51,10 @@
 							<div class="custom_menu">
 								<ul>
 									<li><a href="/SemiColon/index.jsp">HOME</a></li>
-									<li><a href="/SemiColon/jsp/edu/eduMain.jsp">EDU</a></li>
+									<li><a href="/SemiColon/EduMain.do">EDU</a></li>
 									<li><a href="/SemiColon/BoardList.do">COMMUNITY</a></li>
 									<li><a href="/SemiColon/BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-									<li><a class="it_tag">IT의 시작은 여기서😎</a></li>
+									<li><a class="it_tag">IT의 시작은 세미콜론에서</a></li>
 								</ul>
 							</div>
 						</div>
@@ -68,7 +68,9 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="logo">
-								<a href="/SemiColon/index.jsp"><p class="head_logo">SEMICOLON;</p></a>
+								<a href="/SemiColon/index.jsp">
+									<p class="head_logo">SEMICOLON;</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -81,8 +83,9 @@
 					<div class="containt_main">
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
-								onclick="closeNav()">&times;</a> <a href="/SemiColon/index.jsp">Home</a> <a
-								href="fashion.html">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
+								onclick="closeNav()">&times;</a> <a href="/SemiColon/index.jsp">Home</a>
+							<a href="/SemiColon/EduMain.do">EDU</a> <a
+								href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
 							src="<%=request.getContextPath()%>/images/toggle-icon.png"></span>
@@ -93,7 +96,7 @@
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
 								<a class="dropdown-item"
-									href="/SemiColon/EduProgramming.do?programming=programming ">개발·
+									href="/SemiColon/EduProgramming.do?programming=programming">개발·
 									프로그래밍</a> <a class="dropdown-item"
 									href="/SemiColon/EduNetwork.do?network=network">보안 · 네트워크</a> <a
 									class="dropdown-item"
@@ -111,7 +114,8 @@
 									placeholder="원하는 IT 강좌를 입력해주세요.">
 								<div class="input-group-append">
 									<button class="btn btn-secondary" type="button"
-										style="background-color: #f26522; border-color: #f26522">
+										style="background-color: #f26522; border-color: #f26522"
+										onclick="location.href='/SemiColon/EduSearch.do'">
 										<i class="fa fa-search"></i>
 									</button>
 								</div>
@@ -127,22 +131,25 @@
 												class="padding_10">SIGNUP</span>
 										</a></li>
 									</c:if>
-									<c:if test="${auth eq null }">
-										<li><a
-											href="<%=request.getContextPath()%>/jsp/member/login.jsp">
-												<i class="fa fa-user" aria-hidden="true"></i> <span
-												class="padding_10">LOGIN</span>
-										</a></li>
-									</c:if>
+
+									<c:choose>
+										<c:when test="${auth eq null }">
+											<li><a
+												href="<%=request.getContextPath()%>/jsp/member/login.jsp">
+													<i class="fa fa-user" aria-hidden="true"></i> <span
+													class="padding_10">LOGIN</span>
+											</a></li>
+										</c:when>
+										<c:otherwise>
+											<li><i class="fa fa-user" aria-hidden="true"></i> <span
+												class="padding_10">${name} 님은 훌륭한 개발자('◡') </span></li>
+										</c:otherwise>
+									</c:choose>
 									<c:if test="${auth ne null }">
 										<li><a href="/SemiColon/Logout.do"> <i
 												class="fa fa-user" aria-hidden="true"></i> <span
 												class="padding_10">LOGOUT</span></a></li>
 									</c:if>
-									<li><c:if test="${auth ne null }">
-											<span class="padding_10"></span>
-											<span></span>
-										</c:if></li>
 								</ul>
 							</div>
 						</div>

@@ -82,13 +82,137 @@ public class EduDAO extends DAO {
 				vo.setEduImg(rs.getString("eduimg"));
 				list.add(vo);
 			}
-			System.out.println("dao의 list : " + list);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(vo);
+		System.out.println(list);
 		return list;
 
-	};
+	}
+
+	private final String edu_programming = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='programming' AND ROWNUM <= 4";
+	private final String edu_network = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='network' AND ROWNUM <= 4";
+	private final String edu_database = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='database' AND ROWNUM <= 4";
+	private final String edu_skill = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='skill' AND ROWNUM <= 4";
+	private final String edu_career = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='career' AND ROWNUM <= 4";
+	private final String edu_life = "SELECT * FROM ( SELECT * FROM edu ORDER BY eduhit DESC ) WHERE edusubject='life' AND ROWNUM <= 4";
+
+	public ArrayList<EduVO> getEduList(EduVO vo) {
+		ArrayList<EduVO> list = new ArrayList<EduVO>();
+		try {
+			psmt = conn.prepareStatement(edu_programming);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+
+			psmt = conn.prepareStatement(edu_network);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+
+			psmt = conn.prepareStatement(edu_database);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+
+			psmt = conn.prepareStatement(edu_skill);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+
+			psmt = conn.prepareStatement(edu_career);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+
+			psmt = conn.prepareStatement(edu_life);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+			System.out.println(list);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 
 }

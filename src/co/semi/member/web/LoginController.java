@@ -16,13 +16,14 @@ import co.semi.vo.MemberVO;
 @WebServlet("/SemiLogin.do")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public LoginController() {
-        super();
-    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	public LoginController() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		request.setCharacterEncoding("utf-8");
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
@@ -30,30 +31,28 @@ public class LoginController extends HttpServlet {
 
 		vo.setMemberId(request.getParameter("mid"));
 		vo.setPassword(request.getParameter("password"));
-		
+
 		vo = dao.login(vo);
-		
+
 		if (vo.getMemberAuth() != "") {
 			session.setAttribute("id", vo.getMemberId());
 			session.setAttribute("auth", vo.getMemberAuth());
 			session.setAttribute("name", vo.getMemberName());
 		}
-		
-		
+
 		request.setAttribute("vo", vo);
-		
-		String msg = "님 환영합니다.";
-		request.setAttribute("msg", msg);
-		
+
 		String viewPage = "/jsp/menu/head.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

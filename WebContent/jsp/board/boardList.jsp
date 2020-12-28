@@ -31,8 +31,7 @@ tr.rows:hover {
 		<p />
 		<p>&nbsp;
 		<p />
-		<p>&nbsp;
-		<p />
+		<h1 style="font-size: 30px; font-weight: bold">QnA</h1>
 		<p>&nbsp;
 		<p />
 	</div>
