@@ -38,6 +38,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
 	media="screen">
+
 </head>
 
 <body>
@@ -51,12 +52,12 @@
 							<div class="custom_menu">
 								<ul>
 									<li><a href="/SemiColon/index.jsp">HOME</a></li>
-									<li><a href="/SemiColon/jsp/edu/eduMain.jsp">EDU</a></li>
+									<li><a href="/SemiColon/EduList.do">EDU</a></li>
 									<li><a href="/SemiColon/BoardList.do">COMMUNITY</a></li>
 									<li><a href="/SemiColon/BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-									<li><a class="it_tag">IT의 시작은 여기서😎</a></li>
 								</ul>
 							</div>
+							<a class="marquee"><marquee  hspace="40%" behavior=scroll>IT의 시작은 여기서😎</marquee></a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +83,7 @@
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
 								onclick="closeNav()">&times;</a> <a href="/SemiColon/index.jsp">Home</a> <a
-								href="fashion.html">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
+								href="/SemiColon/EduList.do">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
 							src="<%=request.getContextPath()%>/images/toggle-icon.png"></span>
