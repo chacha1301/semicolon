@@ -33,6 +33,7 @@ public class EduDAO extends DAO {
 				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
 				vo.setEduSkill(rs.getString("EDUSKILL"));
 				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {

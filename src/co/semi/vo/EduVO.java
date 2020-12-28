@@ -12,6 +12,8 @@ public class EduVO {
 	private String eduSkill;
 	private String eduKeyword;
 	private String eduImg;
+	
+	
 	public String getMemberId() {
 		return memberId;
 	}

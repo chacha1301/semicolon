@@ -90,13 +90,18 @@
 								id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">강의들</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="/SemiColon/EduProgramming.do?programming=programming "
-									>개발 · 프로그래밍</a> <a
-									class="dropdown-item" id="network" name="network" href="/SemiColon/jsp/edu/eduNetwork.jsp">보안
-									· 네트워크</a> <a class="dropdown-item" href="/SemiColon/jsp/edu/eduDB.jsp" name="database">데이터베이스</a>
-								<a class="dropdown-item" href="/SemiColon/jsp/edu/eduSkill.jsp" name="skill">업무 스킬</a> <a
-									class="dropdown-item" href="/SemiColon/jsp/edu/eduCareer.jsp" name="career">커리어</a> <a
-									class="dropdown-item" href="/SemiColon/jsp/edu/eduLife.jsp" name="life">라이프</a>
+							
+								<a class="dropdown-item" href="/SemiColon/EduProgramming.do?programming=programming ">개발· 프로그래밍</a>
+								
+								<a class="dropdown-item" href="/SemiColon/EduNetwork.do?network=network">보안 · 네트워크</a> 
+									
+									<a class="dropdown-item" href="/SemiColon/EduDatabase.do?database=database">데이터베이스</a>
+									
+									<a class="dropdown-item" href="/SemiColon/EduSkill.do?skill=skill">업무 스킬</a>
+									
+									<a class="dropdown-item" href="/SemiColon/EduCareer.do?career=career">커리어</a>
+									
+									<a class="dropdown-item" href="/SemiColon/EduLife.do?life=life">라이프</a>
 							</div>
 						</div>
 						<div class="main">
