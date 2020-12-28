@@ -6,9 +6,9 @@
 <head>
 <meta charset="utf-8">
 </head>
-<jsp:include page="/jsp/menu/head.jsp" />
+
 <body>
-	<jsp:include page="/jsp/menu/main.jsp" />
+	<jsp:forward page="MainController"></jsp:forward>
 </body>
-<jsp:include page="/jsp/menu/footer.jsp" />
+
 </html>

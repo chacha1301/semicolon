@@ -22,7 +22,7 @@ public class MainController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		// db 호출
 
-		String viewPage = "jsp/menu/homepage.jsp";
+		String viewPage = "jsp/menu/main.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}

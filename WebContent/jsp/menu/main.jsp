@@ -6,8 +6,11 @@
 <head>
 <meta charset="utf-8">
 </head>
-<div>
-<h1>여기에 컨트롤러 만들어서 리스트 가져와서 뿌려주는데 어디</h1></div>
+<jsp:include page="/jsp/menu/head.jsp" />
 <body>
+	<div>
+		<h1>여기에 컨트롤러 만들어서 리스트 가져와서 뿌려주는데</h1>
+	</div>
 </body>
+<jsp:include page="/jsp/menu/footer.jsp" />
 </html>
