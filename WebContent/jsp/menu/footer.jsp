@@ -11,7 +11,8 @@
 	<div class="footer_section layout_padding">
 		<div class="container">
 			<div class="footer_logo">
-				<a href="index.html"><img src="<%=request.getContextPath()%>/images/footer-logo.png"></a>
+				<a href="index.jsp"><img src="<%=request.getContextPath()%>/images/icon.png"></a>
+				<h5 class="logo">semicolon</h5>
 			</div>
 			<div class="input_bt">
 				<input type="text" class="mail_bt" placeholder="Your Email" name="Your Email"> <span

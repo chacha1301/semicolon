@@ -6,20 +6,14 @@
 <jsp:include page="/jsp/menu/head.jsp" />
 
 <head>
-	<meta charset="UTF-8">
-	<title>boardRead.jsp</title>
+<meta charset="UTF-8">
+<title>boardRead.jsp</title>
 </head>
 
 <body>
 	<div align="center">
 		<p>&nbsp;
-			<p />
-			<p>&nbsp;
-				<p />
-				<p>&nbsp;
-					<p />
-					<p>&nbsp;
-						<p />
+		<p />
 	</div>
 
 	<section class="main-content  py-4 mb-5">
@@ -33,7 +27,7 @@
 									<div class="row">
 										<div class="col-md-12" align="center">
 											<P>TITLE</P>
-											<p>${vo.boardtitle }</p>
+											<h3>${vo.boardtitle }</h3>
 											<br>
 											<hr>
 										</div>
@@ -41,7 +35,7 @@
 									<div class="row">
 										<div class="col-md-12" align="center">
 											<P>CONTENT</p>
-											<textarea cols=150 rows="15" id="content" name="content"></textarea>
+											<h3>${vo.boardcontent }</h3>
 										</div>
 									</div>
 								</div>
@@ -53,6 +47,7 @@
 							<div class="card">
 								<div class="card-body">
 									<P>WRITER</p>
+									<h3>${vo.memberid }</h3>
 								</div>
 							</div>
 						</div>
@@ -62,10 +57,16 @@
 							<div class="card">
 								<div class="card-body">
 									<P>DATE</p>
-									<input type="date" id="wdate" name="wdate" style="border: none">
+									<h3>${vo.boarddate }</h3>
 								</div>
 							</div>
 						</div>
+					</div>
+					<div align="center">
+						<p>&nbsp;
+						<p />
+						<button type="button" class="btn btn-sm btn-primary btn-create"
+							onclick="location.href='/SemiColon/BoardList.do'">List</button>
 					</div>
 				</div>
 			</div>
@@ -73,13 +74,13 @@
 	</section>
 	<div align="center">
 		<p>&nbsp;
-			<p />
-			<p>&nbsp;
-				<p />
-				<p>&nbsp;
-					<p />
-					<p>&nbsp;
-						<p />
+		<p />
+		<p>&nbsp;
+		<p />
+		<p>&nbsp;
+		<p />
+		<p>&nbsp;
+		<p />
 	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />

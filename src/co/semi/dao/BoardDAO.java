@@ -24,6 +24,7 @@ public class BoardDAO extends DAO {
 	private final String keywordContentCount = "SELECT count(*) cnt FROM board WHERE boardcontent LIKE ?";
 	private final String hit_update = "UPDATE board set boardhit = boardhit + 1 WHERE memberid=?";
 	private final String board_read = "SELECT * FROM board WHERE memberid=? ";
+	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(semi_b_seq.NEXTVAL, ?, ?, ?, ?)";
 
 	public ArrayList<BoardVO> getList(String currentPage, Integer pSize) {
 
@@ -152,7 +153,6 @@ public class BoardDAO extends DAO {
 		}
 	}
 
-	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(semi_b_seq.NEXTVAL, ?, ?, ?, ?)";
 
 	public int insert(BoardVO vo) {
 		int n = 0;
