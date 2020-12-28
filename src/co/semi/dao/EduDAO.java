@@ -16,7 +16,7 @@ public class EduDAO extends DAO {
 
 	public ArrayList<EduVO> programmingList(EduVO vo) {
 		ArrayList<EduVO> list = new ArrayList<EduVO>();
-		
+
 		try {
 			psmt = conn.prepareStatement(subject_pro);
 			psmt.setString(1, vo.getEduSubject());
