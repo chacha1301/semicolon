@@ -44,7 +44,7 @@ public class EduDAO extends DAO {
 		return list;
 	}
 
-	public ArrayList<EduVO> getMainNew(EduVO vo) {
+	public ArrayList<EduVO> getMainList(EduVO vo) {
 		ArrayList<EduVO> list = new ArrayList<EduVO>();
 		try {
 			psmt = conn.prepareStatement(edu_new);
@@ -64,7 +64,7 @@ public class EduDAO extends DAO {
 				vo.setEduImg(rs.getString("eduimg"));
 				list.add(vo);
 			}
-			
+
 			psmt = conn.prepareStatement(edu_hit);
 			rs = psmt.executeQuery();
 			while (rs.next()) {
@@ -82,8 +82,7 @@ public class EduDAO extends DAO {
 				vo.setEduImg(rs.getString("eduimg"));
 				list.add(vo);
 			}
-			
-			
+			System.out.println("dao의 list : " + list);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

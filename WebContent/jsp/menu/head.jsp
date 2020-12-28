@@ -81,7 +81,7 @@
 					<div class="containt_main">
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
-								onclick="closeNav()">&times;</a> <a href="index.jsp">Home</a> <a
+								onclick="closeNav()">&times;</a> <a href="/SemiColon/index.jsp">Home</a> <a
 								href="fashion.html">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
