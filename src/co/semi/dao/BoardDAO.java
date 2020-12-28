@@ -153,7 +153,6 @@ public class BoardDAO extends DAO {
 		}
 	}
 
-
 	public int insert(BoardVO vo) {
 		int n = 0;
 		try {
@@ -176,6 +175,7 @@ public class BoardDAO extends DAO {
 			psmt.setString(1, vo.getMemberid());
 			rs = psmt.executeQuery();
 			while (rs.next()) {
+				
 				psmt = conn.prepareStatement(hit_update);
 				psmt.setString(1, vo.getMemberid());
 				psmt.executeUpdate();
@@ -194,5 +194,21 @@ public class BoardDAO extends DAO {
 		}
 
 		return vo;
+	}
+
+	private final String board_delete = "DELETE FROM board WHERE memberid=?";
+
+	public int delete(BoardVO vo) {
+		int n = 0;
+		try {
+			psmt = conn.prepareStatement(board_delete);
+			psmt.setString(1, vo.getMemberid());
+			n = psmt.executeUpdate();
+			System.out.println(n + "건이 삭제되었습니다.");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return n;
 	}
 }

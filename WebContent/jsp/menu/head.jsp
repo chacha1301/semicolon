@@ -90,13 +90,13 @@
 								id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">강의들</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="/SemiColon/EduListServ.do"
-									id="develope" name="develope">개발 · 프로그래밍</a> <a
-									class="dropdown-item" href="#" id="network" name="network">보안
-									· 네트워크</a> <a class="dropdown-item" href="#" name="database">데이터베이스</a>
-								<a class="dropdown-item" href="#" name="skill">업무 스킬</a> <a
-									class="dropdown-item" href="#" name="career">커리어</a> <a
-									class="dropdown-item" href="#" name="life">라이프</a>
+								<a class="dropdown-item" href="/SemiColon/EduProgramming.do?programming=programming "
+									>개발 · 프로그래밍</a> <a
+									class="dropdown-item" id="network" name="network" href="/SemiColon/jsp/edu/eduNetwork.jsp">보안
+									· 네트워크</a> <a class="dropdown-item" href="/SemiColon/jsp/edu/eduDB.jsp" name="database">데이터베이스</a>
+								<a class="dropdown-item" href="/SemiColon/jsp/edu/eduSkill.jsp" name="skill">업무 스킬</a> <a
+									class="dropdown-item" href="/SemiColon/jsp/edu/eduCareer.jsp" name="career">커리어</a> <a
+									class="dropdown-item" href="/SemiColon/jsp/edu/eduLife.jsp" name="life">라이프</a>
 							</div>
 						</div>
 						<div class="main">
@@ -145,57 +145,9 @@
 				</div>
 			</div>
 			<!-- header section end -->
-			<!-- banner section start -->
-			<div class="banner_section layout_padding">
-				<div class="container">
-					<div id="my_slider" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="row">
-									<div class="col-sm-12">
-										<h1 class="banner_taital">
-											Get Upgrade <br>Your IT skills
-										</h1>
-										<div class="buynow_bt">
-											<a href="#">Buy Now</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="row">
-									<div class="col-sm-12">
-										<h1 class="banner_taital">
-											WakeUp <br>Your Potential
-										</h1>
-										<div class="buynow_bt">
-											<a href="#">Buy Now</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="row">
-									<div class="col-sm-12">
-										<h1 class="banner_taital">
-											Be An Expert <br> From Now On
-										</h1>
-										<div class="buynow_bt">
-											<a href="#">Buy Now</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#my_slider" role="button"
-							data-slide="prev"> <i class="fa fa-angle-left"></i>
-						</a> <a class="carousel-control-next" href="#my_slider" role="button"
-							data-slide="next"> <i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-				</div>
+			<div class="header_section">
+				<div class="container"></div>
 			</div>
-			<!-- banner section end -->
 		</div>
 	</div>
 

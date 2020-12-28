@@ -6,34 +6,35 @@
 <jsp:include page="/jsp/menu/head.jsp" />
 
 <head>
-	<meta charset="UTF-8">
-	<title>boardList.jsp</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<meta charset="UTF-8">
+<title>boardList.jsp</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <style>
-	.select,
-	.search,
-	.submit {
-		border-radius: 5px
-	}
+.select, .search, .submit {
+	border-radius: 5px
+}
 
-	tr.rows:hover {
-		background: pink;
-	}
+tr.rows:hover {
+	background: pink;
+}
 </style>
 
 <body>
 	<div align="center">
 		<p>&nbsp;
-			<p />
-			<p>&nbsp;
-				<p />
-				<p>&nbsp;
-					<p />
-					<p>&nbsp;
-						<p />
+		<p />
+		<p>&nbsp;
+		<p />
+		<p>&nbsp;
+		<p />
+		<p>&nbsp;
+		<p />
 	</div>
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
@@ -63,8 +64,9 @@
 							<option value="boardcontent">CONTENT</option>
 						</c:otherwise>
 					</c:choose>
-				</select>&nbsp;&nbsp; <input type="text" size="20" id="search" name="search" class="search">&nbsp;&nbsp;
-				<input type="submit" value="검색" class="submit">
+				</select>&nbsp;&nbsp; <input type="text" size="20" id="search" name="search"
+					class="search">&nbsp;&nbsp; <input type="submit" value="검색"
+					class="submit">
 			</form>
 			<p></p>
 			<div class="panel panel-default panel-table">
@@ -79,6 +81,7 @@
 					<table class="table table-striped table-bordered table-list">
 						<thead>
 							<tr>
+								<th>NO.</th>
 								<th>질문</th>
 								<th>작성자 ID</th>
 								<th>작성일자</th>
@@ -89,20 +92,31 @@
 						<c:forEach var="vo" items="${list }">
 							<tbody>
 								<tr class="rows">
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td
+										onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+										${vo.boardnumber}</td>
+									<td
+										onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
 										${vo.boardtitle}</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td
+										onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
 										${vo.memberid}</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td
+										onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
 										${vo.boarddate }</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td
+										onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
 										${vo.boardhit }</td>
-									<td align="center">
-										<c:if test="${vo.memberid eq session_id }">
-											<a class="btn btn-default" onclick="location.href='/SemiColon/BoardEditBefore.do?id=${vo.memberid}'"> <em class="fa fa-pencil"></em></a>
-											<a class="btn btn-danger" onclick="location.href='/SemiColon/BoardDelete.do?id=${vo.memberid}'"><em class="fa fa-trash"></em></a>
-										</c:if>
-									</td>
+									<td align="center"><c:if
+											test="${vo.memberid eq session_id }">
+											<a class="btn btn-default"
+												onclick="location.href='/SemiColon/BoardEditBefore.do?id=${vo.memberid}'">
+												<em class="fa fa-pencil"></em>
+											</a>
+											<a class="btn btn-danger"
+												onclick="location.href='/SemiColon/BoardDelete.do?id=${vo.memberid}'"><em
+												class="fa fa-trash"></em></a>
+										</c:if></td>
 								</tr>
 							</tbody>
 						</c:forEach>
@@ -119,7 +133,8 @@
 								<li><a href="javascript:goPage(${params.nextPageNo})">></a></li>
 							</ul>
 							<ul class="pagination hidden-xs pull-right">
-								<c:forEach var="i" begin="${params.startPageNo}" end="${params.endPageNo}" step="1">
+								<c:forEach var="i" begin="${params.startPageNo}"
+									end="${params.endPageNo}" step="1">
 									<c:choose>
 										<c:when test="${i eq params.pageNo}">
 											<li><a href="javascript:goPage(${i})">${i}</a></li>
@@ -132,38 +147,46 @@
 							</ul>
 							<ul class="pagination hidden-xs pull-right">
 								<li><a href="javascript:goPage(${params.prevPageNo})">
-										<</a> </li> </ul> <ul class="pagination hidden-xs pull-right">
+										<</a></li>
+							</ul>
+							<ul class="pagination hidden-xs pull-right">
 								<li><a href="javascript:goPage(${params.firstPageNo})">
-										<<</a> </li> </ul> </div> </div> </div> </div> <c:if test="${auth ne null }">
-											<div align="center">
-												<button type="button" class="btn btn-sm btn-primary btn-create"
-													onclick="location.href='/SemiColon/jsp/board/boardNew.jsp?id=${vo.memberid}'">Create
-													New</button>
-											</div>
-											</c:if>
-											<div align="center">
-												<p>&nbsp;
-													<p />
-													<p>&nbsp;
-														<p />
-														<p>&nbsp;
-															<p />
-															<p>&nbsp;
-																<p />
-																<p>&nbsp;
-																	<p />
-											</div>
+										<<</a></li>
+							</ul>
 						</div>
 					</div>
-					<script>
-						function goPage(page) {
-							let opt = document.getElementById("opt").value;
-							let search = document.getElementById("search").value;
+				</div>
+			</div>
+			<c:if test="${auth ne null }">
+				<div align="center">
+					<button type="button" class="btn btn-sm btn-primary btn-create"
+						onclick="location.href='/SemiColon/jsp/board/boardNew.jsp?id=${vo.memberid}'">Create
+						New</button>
+				</div>
+			</c:if>
+			<div align="center">
+				<p>&nbsp;
+				<p />
+				<p>&nbsp;
+				<p />
+				<p>&nbsp;
+				<p />
+				<p>&nbsp;
+				<p />
+				<p>&nbsp;
+				<p />
+			</div>
+		</div>
+	</div>
+	<script>
+		function goPage(page) {
+			let opt = document.getElementById("opt").value;
+			let search = document.getElementById("search").value;
 
-							location.href = "BoardList.do?pageNum=" + page + "&opt=" + opt +
-								"&search=" + search;
-						}
-					</script>
+			location.href = "BoardList.do?pageNum=" + page + "&opt=" + opt
+					+ "&search=" + search;
+		}
+	</script>
 
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />

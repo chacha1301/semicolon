@@ -14,6 +14,9 @@
 	<div align="center">
 		<p>&nbsp;
 		<p />
+		<p>&nbsp;
+		<p />
+		<h1>QnA</h1>
 	</div>
 
 	<section class="main-content  py-4 mb-5">
@@ -66,7 +69,7 @@
 						<p>&nbsp;
 						<p />
 						<button type="button" class="btn btn-sm btn-primary btn-create"
-							onclick="location.href='/SemiColon/BoardList.do'">List</button>
+							onclick="location.href='/SemiColon/BoardList.do'">&nbsp;&nbsp;List&nbsp;&nbsp;</button>
 					</div>
 				</div>
 			</div>
