@@ -96,11 +96,6 @@
 					</div>
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#electronic_main_slider"
-				role="button" data-slide="prev"> <i class="fa fa-angle-left"></i>
-			</a> <a class="carousel-control-next" href="#electronic_main_slider"
-				role="button" data-slide="next"> <i class="fa fa-angle-right"></i>
-			</a>
 		</div>
 	</div>
 </body>

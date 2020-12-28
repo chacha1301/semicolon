@@ -5,11 +5,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Main</title>
 </head>
+<div>
+<h1>여기에 컨트롤러 만들어서 리스트 가져와서 뿌려주는데 어디</h1></div>
 <body>
-	<jsp:include page="/jsp/menu/main_1.jsp" />
-	<jsp:include page="/jsp/menu/main_2.jsp" />
-	<jsp:include page="/jsp/menu/main_3.jsp" />
 </body>
 </html>

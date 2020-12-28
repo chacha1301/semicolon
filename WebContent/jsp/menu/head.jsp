@@ -53,6 +53,8 @@
 									<li><a href="/SemiColon/index.jsp">HOME</a></li>
 									<li><a href="/SemiColon/jsp/edu/eduMain.jsp">EDU</a></li>
 									<li><a href="/SemiColon/BoardList.do">COMMUNITY</a></li>
+									<li><a href="/SemiColon/BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+									<li><a class="it_tag">IT의 시작은 여기서😎</a></li>
 								</ul>
 							</div>
 						</div>
@@ -66,8 +68,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="logo">
-								<a href="/SemiColon/index.jsp"><img
-									src="<%=request.getContextPath()%>/images/icon.png"></a>
+								<a href="/SemiColon/index.jsp"><p class="head_logo">SEMICOLON;</p></a>
 							</div>
 						</div>
 					</div>
@@ -90,25 +91,24 @@
 								id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">강의들</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							
-								<a class="dropdown-item" href="/SemiColon/EduProgramming.do?programming=programming ">개발· 프로그래밍</a>
-								
-								<a class="dropdown-item" href="/SemiColon/EduNetwork.do?network=network">보안 · 네트워크</a> 
-									
-									<a class="dropdown-item" href="/SemiColon/EduDatabase.do?database=database">데이터베이스</a>
-									
-									<a class="dropdown-item" href="/SemiColon/EduSkill.do?skill=skill">업무 스킬</a>
-									
-									<a class="dropdown-item" href="/SemiColon/EduCareer.do?career=career">커리어</a>
-									
-									<a class="dropdown-item" href="/SemiColon/EduLife.do?life=life">라이프</a>
+
+								<a class="dropdown-item"
+									href="/SemiColon/EduProgramming.do?programming=programming ">개발·
+									프로그래밍</a> <a class="dropdown-item"
+									href="/SemiColon/EduNetwork.do?network=network">보안 · 네트워크</a> <a
+									class="dropdown-item"
+									href="/SemiColon/EduDatabase.do?database=database">데이터베이스</a> <a
+									class="dropdown-item" href="/SemiColon/EduSkill.do?skill=skill">업무
+									스킬</a> <a class="dropdown-item"
+									href="/SemiColon/EduCareer.do?career=career">커리어</a> <a
+									class="dropdown-item" href="/SemiColon/EduLife.do?life=life">라이프</a>
 							</div>
 						</div>
 						<div class="main">
 							<!-- Another variation with a button -->
 							<div class="input-group">
 								<input type="text" class="form-control"
-									placeholder="원하는 강좌를 입력해주세요.">
+									placeholder="원하는 IT 강좌를 입력해주세요.">
 								<div class="input-group-append">
 									<button class="btn btn-secondary" type="button"
 										style="background-color: #f26522; border-color: #f26522">
