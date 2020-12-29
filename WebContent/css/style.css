@@ -15,34 +15,76 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 .it_tag {
-	font-size: 20px;
-	color: white;
-	font-weight: bold;
+   font-size: 20px;
+   color: white;
+   font-weight: bold;
 }
 
 .head_logo {
-	font-size: 40px;
-	color: white;
-	font-weight: bold;
+   font-size: 40px;
+   color: white;
+   font-weight: bold;
 }
 
 .sub_name {
-	 width: 100%;
+    width: 100%;
     font-size: 25px;
     color: #30302e;
     font-weight: bold;
-	text-align: left;
+   text-align: left;
 }
 
 .fuck {
-	margin-bottom: 30px;
-	margin-left: 2px;
-	margin-right: 2px;
+   margin-bottom: 30px;
+   margin-left: 2px;
+   margin-right: 2px;
+}
+.detailFont{
+font-size: 15px;
+}
+a.detailFont{
+font-size: 20px;   
+}
+p.navFont{
+   color:black;
+}
+a.blog-nav-item{
+   font-size:40px;
+}
+
+a.marquee{
+   color: white;
+   font-size: 10px;
+}
+.it_tag {
+   font-size: 20px;
+   color: white;
+   font-weight: bold;
+}
+
+.head_logo {
+   font-size: 40px;
+   color: white;
+   font-weight: bold;
+}
+
+.sub_name {
+    width: 100%;
+    font-size: 25px;
+    color: #30302e;
+    font-weight: bold;
+   text-align: left;
+}
+
+.fuck {
+   margin-bottom: 30px;
+   margin-left: 2px;
+   margin-right: 2px;
 }
 
 h5.logo{
-	color: white;
-	text-align: center;
+   color: white;
+   text-align: center;
 }
 * {
     box-sizing: border-box !important;
@@ -148,7 +190,7 @@ ol {
 p {
     margin: 20px;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 24px;
 }
 
@@ -229,7 +271,7 @@ button {
 }
 
 .layout_padding {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 0px;
 }
 
@@ -260,7 +302,7 @@ button {
 .header_section_top {
     width: 100%;
     float: left;
-    background-color: #2b2a29;
+    background-color: #000000;
     clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
     height: auto;
     padding: 5px 0px;
@@ -376,7 +418,7 @@ button {
     cursor: pointer;
     color: #ffffff;
     order: 2;
-	width: 6%; 
+   width: 6%; 
 }
 
 .header_box {
@@ -420,7 +462,7 @@ button {
 
 .main {
     flex: 1;
-    margin: 0px 30px;
+    margin: 10px 30px;
     display: inline-block;
     order: 2;
 }
@@ -585,7 +627,7 @@ a:hover {
 .fashion_section {
     width: 100%;
     float: left;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .fashion_taital {
@@ -598,7 +640,7 @@ a:hover {
 
 .fashion_section_2 {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .box_main {
@@ -765,7 +807,7 @@ a:hover {
     min-height: 293px;
 }
 
-#jewellery_main_slider a.carousel-control-next {
+#jewellery_main_Fslider a.carousel-control-next {
     right: 615px;
     top: 75%;
 }
@@ -846,8 +888,8 @@ a:hover {
 
 /* footer section start */
 h5.logo{
-	color: white;
-	text-align: center;
+   color: white;
+   text-align: center;
 }
 .footer_section {
     width: 100%;
