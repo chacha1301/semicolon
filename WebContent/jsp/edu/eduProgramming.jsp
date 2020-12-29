@@ -34,7 +34,7 @@
 													<img class="card-img-top" src="images/${vo.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo.eduTitle }</h5>
 														<h5 class="card-text">${vo.eduLecturer }</h5>
 														<h5 class="card-text">난이도 : ${vo.eduDifficulty }
 														</h5>

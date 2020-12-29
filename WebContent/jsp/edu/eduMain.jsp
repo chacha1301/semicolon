@@ -36,7 +36,7 @@
 													<img class="card-img-top" src="images/${vo_p.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_p.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_p.eduTitle }</h5>
 														<h5 class="card-text">${vo_p.eduLecturer }</h5>
 														<h5 class="card-text">난이도 : ${vo_p.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_p.eduPrice }</a>
@@ -68,11 +68,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_n" items="${listNetwork }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_n.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo_n.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_n.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_n.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_n.eduTitle }</h5>
 														<h5 class="card-text">${vo_n.eduLecturer }</h5>
 														<h5 class="card-text">${vo_n.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_n.eduPrice }</a>
@@ -104,11 +104,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_d" items="${listDatabase }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_d.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo_d.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_d.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_d.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_d.eduTitle }</h5>
 														<h5 class="card-text">${vo_d.eduLecturer }</h5>
 														<h5 class="card-text">${vo_d.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_d.eduPrice }</a>
@@ -140,11 +140,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_s" items="${listskill }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_s.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo_s.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_s.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_s.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_s.eduTitle }</h5>
 														<h5 class="card-text">${vo_s.eduLecturer }</h5>
 														<h5 class="card-text">${vo_s.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_s.eduPrice }</a>
@@ -176,11 +176,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_c" items="${listCareer }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_c.eduNumber}'">
+												<div class="card" style="width: 18rem;height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo_c.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_c.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_c.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_c.eduTitle }</h5>
 														<h5 class="card-text">${vo_c.eduLecturer }</h5>
 														<h5 class="card-text">${vo_c.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_c.eduPrice }</a>
@@ -212,11 +212,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_l" items="${listLife }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_l.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo_l.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_l.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_l.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_l.eduTitle }</h5>
 														<h5 class="card-text">${vo_l.eduLecturer }</h5>
 														<h5 class="card-text">${vo_l.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_l.eduPrice }</a>

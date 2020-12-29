@@ -79,7 +79,7 @@
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
 								onclick="closeNav()">&times;</a> <a href="HomeController.do">Home</a>
-							<a href="EduMain.do">EDU</a> <a href="BoardList.do">COMMUNITY</a>
+							<a href="/SemiColon/EduMain.do">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
 							src="<%=request.getContextPath()%>/images/toggle-icon.png"></span>
