@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 </head>
-<jsp:include page="/jsp/menu/head.jsp" />
+<jsp:include page="head.jsp" />
 
 <body>
 	<div class="banner_section layout_padding">
@@ -28,8 +28,8 @@
 													<div class="card-body">
 														<h5 class="card-title">${vo1.eduTitle }</h5>
 														<h5 class="card-text">${vo1.eduLecturer }</h5>
-														<h5 class="card-text">${vo1.eduDifficulty }</h5>
-														<a href="#" class="btn btn-primary">$ ${vo1.eduPrice }</a>
+														<h5 class="card-text">난이도 : ${vo1.eduDifficulty }</h5>
+														<a href="#" class="btn btn-primary">${vo1.eduPrice }</a>
 													</div>
 												</div>
 											</div>
@@ -78,6 +78,6 @@
 		</div>
 	</div>
 </body>
-<jsp:include page="/jsp/menu/footer.jsp" />
+<jsp:include page="footer.jsp" />
 
 </html>

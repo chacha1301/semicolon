@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<jsp:include page="/jsp/menu/head.jsp" />
+<jsp:include page="../menu/head.jsp" />
 <html>
 
 <head>
@@ -26,13 +26,13 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_p" items="${listProgramming }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem; height: 25rem">
 													<img class="card-img-top" src="images/${vo_p.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
 														<h5 class="card-title">${vo_p.eduTitle }</h5>
 														<h5 class="card-text">${vo_p.eduLecturer }</h5>
-														<h5 class="card-text">${vo_p.eduDifficulty }</h5>
+														<h5 class="card-text">난이도 : ${vo_p.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_p.eduPrice }</a>
 													</div>
 												</div>
@@ -225,4 +225,4 @@
 </body>
 
 </html>
-<jsp:include page="/jsp/menu/footer.jsp" />
+<jsp:include page="../menu/footer.jsp" />

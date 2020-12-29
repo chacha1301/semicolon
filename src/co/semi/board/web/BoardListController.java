@@ -64,7 +64,6 @@ public class BoardListController extends HttpServlet {
 		request.setAttribute("opt", opt);
 		request.setAttribute("search", search);
 		request.setAttribute("totalCount", paging.getTotalCount());
-		System.out.println(paging);
 		HttpSession session = request.getSession();
 		request.setAttribute("session_id", session.getAttribute("id"));
 		String viewPage = "jsp/board/boardList.jsp";

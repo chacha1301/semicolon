@@ -27,7 +27,7 @@ public class LoginController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
-		HttpSession session = request.getSession(false); // 세션객체를 가져옴.
+		HttpSession session = request.getSession(); // 세션객체를 가져옴.
 
 		vo.setMemberId(request.getParameter("mid"));
 		vo.setPassword(request.getParameter("password"));
@@ -40,11 +40,11 @@ public class LoginController extends HttpServlet {
 			session.setAttribute("name", vo.getMemberName());
 		}
 
-		request.setAttribute("vo", vo);
-
-		String viewPage = "/jsp/menu/head.jsp";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
-		dispatcher.forward(request, response);
+//		String viewPage = "/jsp/menu/main.jsp";
+//		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
+//		dispatcher.forward(request, response);
+		
+		response.sendRedirect("HomeController.do");
 	}
 
 	/**

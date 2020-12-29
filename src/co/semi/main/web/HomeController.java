@@ -36,8 +36,7 @@ public class HomeController extends HttpServlet {
 
 		request.setAttribute("listNew", listNew);
 		request.setAttribute("listGood", listGood);
-		System.out.println("new size" + listNew);
-		System.out.println("good sizq" + listGood);
+		
 		String viewPage = "jsp/menu/main.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);

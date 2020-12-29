@@ -1,6 +1,7 @@
 package co.semi.edu.web;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,12 +23,13 @@ public class EduSearchController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("utf-8");
 
-		EduVO vo = new EduVO();
 		EduDAO dao = new EduDAO();
-		
+		ArrayList<EduVO> list = dao.searchList(request.getParameter("search"));
+		request.setAttribute("list", list);
+
 		String viewPage = "jsp/edu/eduSearch.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);

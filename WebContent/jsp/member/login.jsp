@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-<jsp:include page="/jsp/menu/head.jsp" />
+<jsp:include page="../menu/head.jsp" />
 
 <head>
 	<meta charset="utf-8">
@@ -70,6 +70,6 @@
 					<p />
 	</div>
 </body>
-<jsp:include page="/jsp/menu/footer.jsp" />
+<jsp:include page="../menu/footer.jsp" />
 
 </html>

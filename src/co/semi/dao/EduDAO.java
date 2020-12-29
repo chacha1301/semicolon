@@ -85,7 +85,6 @@ public class EduDAO extends DAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(list);
 		return list;
 
 	}
@@ -209,6 +208,36 @@ public class EduDAO extends DAO {
 			}
 			System.out.println(list);
 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	private final String edu_search = "SELECT * FROM edu WHERE eduKeyword LIKE ?";
+
+	public ArrayList<EduVO> searchList(String parameter) {
+		ArrayList<EduVO> list = new ArrayList<EduVO>();
+		try {
+			psmt = conn.prepareStatement(edu_search);
+			psmt.setString(1, "%" + parameter + "%");
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				EduVO vo = new EduVO();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+				list.add(vo);
+			}
+			System.out.println("검색list: " + list);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

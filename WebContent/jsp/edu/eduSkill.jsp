@@ -24,13 +24,13 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo" items="${list }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem; height: 25rem">
 													<img class="card-img-top" src="images/${vo.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
 														<h5 class="card-title">${vo.eduTitle }</h5>
 														<h5 class="card-text">${vo.eduLecturer }</h5>
-														<h5 class="card-text">${vo.eduDifficulty }</h5>
+														<h5 class="card-text">난이도 : ${vo.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo.eduPrice }</a>
 													</div>
 												</div>
