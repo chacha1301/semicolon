@@ -52,7 +52,8 @@
 										<div class="row">
 											<div class="col-md-12" align="center">
 												<P>CONTENT</p>
-												<textarea cols=150 rows="15" id="content" name="content"></textarea>
+												<textarea cols=150 rows="15" id="content"
+													name="content"></textarea>
 											</div>
 										</div>
 									</div>

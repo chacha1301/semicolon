@@ -49,7 +49,7 @@
 									<li><a href="EduMain.do">EDU</a></li>
 									<li><a href="BoardList.do">COMMUNITY</a></li>
 									<li><a href="BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-									<li><a class="it_tag">IT의 시작은 세미콜론에서</a></li>
+									<li><a class="it_tag">IT의 시작은 세미콜론에서🤑</a></li>
 								</ul>
 							</div>
 						</div>

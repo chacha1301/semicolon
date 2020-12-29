@@ -11,6 +11,10 @@
 </head>
 
 <body>
+	<div align="center">
+		<p>&nbsp;
+		<p />
+	</div>
 	<div class="banner_section layout_padding">
 		<div class="fashion_section">
 			<div id="main_slider" class="carousel slide" data-ride="carousel">
@@ -19,14 +23,16 @@
 						<div class="container">
 							<a class="category_click"
 								href="/SemiColon/EduProgramming.do?programming=programming">
-								<h1 class="fashion_taital">Programming >> START</h1>
+								<h1 class="fashion_taital">Programming >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_p" items="${listProgramming }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem"
+													onclick="location.href='/SemiColon/EduRead.do?id=${vo_p.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_p.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
@@ -54,14 +60,15 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<a href="/SemiColon/EduNetwork.do?network=network">
-								<h1 class="fashion_taital">Security · NETWORK >> START</h1>
+								<h1 class="fashion_taital">Security · NETWORK >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_n" items="${listNetwork }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_n.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_n.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
@@ -89,14 +96,15 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<a href="/SemiColon/EduDatabase.do?database=database">
-								<h1 class="fashion_taital">DataBase >> START</h1>
+								<h1 class="fashion_taital">DataBase >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_d" items="${listDatabase }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_d.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_d.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
@@ -124,14 +132,15 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<a href="/SemiColon/EduSkill.do?skill=skill">
-								<h1 class="fashion_taital">Work Skill >> START</h1>
+								<h1 class="fashion_taital">Work Skill >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_s" items="${listskill }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_s.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_s.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
@@ -159,14 +168,15 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<a href="/SemiColon/EduCareer.do?career=career">
-								<h1 class="fashion_taital">My Career >> START</h1>
+								<h1 class="fashion_taital">My Career >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_c" items="${listCareer }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_c.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_c.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
@@ -194,14 +204,15 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<a href="/SemiColon/EduLife.do?life=life">
-								<h1 class="fashion_taital">My Life is Good >> START</h1>
+								<h1 class="fashion_taital">My Life is Good >> <span
+									style="color: red; font-size: 15px;">START!!</span></h1>
 							</a>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo_l" items="${listLife }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo_l.eduNumber}'">
 													<img class="card-img-top" src="images/${vo_l.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">

@@ -29,7 +29,7 @@ public class EduReadController extends HttpServlet {
 		vo = dao.selectOne(vo);
 
 		request.setAttribute("vo", vo);
-		String viewPage = "jsp/edu/eduDescription.jsp";
+		String viewPage = "jsp/edu/eduRead.jsp";
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);

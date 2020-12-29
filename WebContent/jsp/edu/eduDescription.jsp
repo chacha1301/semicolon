@@ -4,67 +4,69 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="/jsp/menu/head.jsp" />
+
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<!-- 플로팅 배너 -->
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-	$(function() {
-		$(window).scroll(function() {
-			var top = $(window).scrollTop();
-			$(".main_right").animate({
-				"top" : top + 50 + "px"
-			}, 30);
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<!-- 플로팅 배너 -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				var top = $(window).scrollTop();
+				$(".main_right").animate({
+					"top": top + 50 + "px"
+				}, 30);
+			});
+			$(".main_right").click(function () {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 100);
+			});
 		});
-		$(".main_right").click(function() {
-			$("html,body").animate({
-				scrollTop : 0
-			}, 100);
-		});
-	});
-</script>
+	</script>
 
-<script>
-	$.fn.generateStars = function() {
-		return this.each(function(i, e) {
-			$(e).html($('<p/>').width($(e).text() * 16));
-		});
-	};
+	<script>
+		$.fn.generateStars = function () {
+			return this.each(function (i, e) {
+				$(e).html($('<p/>').width($(e).text() * 16));
+			});
+		};
 
-	// 숫자 평점을 별로 변환하도록 호출하는 함수
-	$('.star-prototype').generateStars();
-</script>
+		// 숫자 평점을 별로 변환하도록 호출하는 함수
+		$('.star-prototype').generateStars();
+	</script>
 
-<style>
-div>div.jumbotron {
-	width: 298px;
-	height: 450px;
-	float: right;
-	margin-right: 3%;
-}
+	<style>
+		div>div.jumbotron {
+			width: 298px;
+			height: 450px;
+			float: right;
+			margin-right: 3%;
+		}
 
-,
-div.padding_main {
-	margin-left: 3%;
-}
+		,
+		div.padding_main {
+			margin-left: 3%;
+		}
 
-,
-iframe {
-	margin-left: 3%;
-	margin-right: 10%;
-}
+		,
+		iframe {
+			margin-left: 3%;
+			margin-right: 10%;
+		}
 
-,
-div>div>iframe#descriptTable {
-	margin-left: 10%;
-	margin-right: 10%;
-}
-</style>
+		,
+		div>div>iframe#descriptTable {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+	</style>
 
 
 </head>
+
 <body>
 	<div>
 		<div class="jumbotron">
@@ -76,8 +78,7 @@ div>div>iframe#descriptTable {
 		</div>
 		<div class="padding_main">
 			<div>
-				<img width="20%" src="images/${vo.eduImg}"> <a
-					class="detailFont">강의명: ${vo.eduTitle}</a>
+				<img width="20%" src="images/${vo.eduImg}"> <a class="detailFont">강의명: ${vo.eduTitle}</a>
 
 			</div>
 
