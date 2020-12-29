@@ -67,8 +67,6 @@ div>div>iframe#descriptTable {
 </head>
 <body>
 	<div>
-
-		<h1>강의 상세 페이지 입니다.</h1>
 		<div class="jumbotron">
 			<a class="detailFont">강의명: ${vo.eduTitle}</a>
 			<p class="detailFont">강사: ${vo.eduLecturer}</p>
@@ -92,15 +90,6 @@ div>div>iframe#descriptTable {
 
 			</div>
 		</div>
-
-
-		<div></div>
-		<div>
-			<iframe width="90%" align="middle" height="600"
-				src="/SemiColon/EduDescript.do?id=${vo.eduNumber}"
-				name="descriptTable" id="descriptTable"></iframe>
-		</div>
-
 	</div>
 </body>
 <jsp:include page="/jsp/menu/footer.jsp" />

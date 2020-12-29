@@ -237,7 +237,6 @@ public class EduDAO extends DAO {
 				vo.setEduImg(rs.getString("eduimg"));
 				list.add(vo);
 			}
-			System.out.println("검색list: " + list);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -250,6 +249,36 @@ public class EduDAO extends DAO {
 	public EduVO selectDescOne(EduVO vo) {
 		try {
 			psmt = conn.prepareStatement(selectDescOne);
+			psmt.setInt(1, vo.getEduNumber());
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				psmt = conn.prepareStatement(hit_update);
+				psmt.setInt(1, vo.getEduNumber());
+				psmt.execute();
+				vo.setMemberId(rs.getString("MEMBERID"));
+				vo.setEduNumber(rs.getInt("EDUNUMBER"));
+				vo.setEduTitle(rs.getString("EDUTITLE"));
+				vo.setEduPrice(rs.getString("EDUPRICE"));
+				vo.setEduLecturer(rs.getString("EDULECTURER"));
+				vo.setEduSubject(rs.getString("EDUSUBJECT"));
+				vo.setEduHit(rs.getInt("EDUHIT"));
+				vo.setEduDifficulty(rs.getString("EDUDIFFICULTY"));
+				vo.setEduSkill(rs.getString("EDUSKILL"));
+				vo.setEduKeyword(rs.getString("EDUKEYWORD"));
+				vo.setEduImg(rs.getString("eduimg"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vo;
+	}
+
+	private final String selectOne = "select * from edu where edunumber=?";
+
+	public EduVO selectOne(EduVO vo) {
+
+		try {
+			psmt = conn.prepareStatement(selectOne);
 			psmt.setInt(1, vo.getEduNumber());
 			rs = psmt.executeQuery();
 			if (rs.next()) {

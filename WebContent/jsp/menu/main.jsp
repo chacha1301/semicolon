@@ -22,7 +22,7 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo1" items="${listNew }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo.eduNumber}'">
 													<img class="card-img-top" src="images/${vo1.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
