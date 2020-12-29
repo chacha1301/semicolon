@@ -14,6 +14,20 @@
 @import url(nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+.detailFont{
+font-size: 15px;
+}
+a.detailFont{
+font-size: 20px;	
+}
+p.navFont{
+	color:black;
+}
+a.blog-nav-item{
+	font-size:40px;
+}
+
 a.marquee{
 	color: white;
 	font-size: 10px;
@@ -152,7 +166,7 @@ ol {
 p {
     margin: 20px;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 24px;
 }
 
@@ -264,7 +278,7 @@ button {
 .header_section_top {
     width: 100%;
     float: left;
-    background-color: #2b2a29;
+    background-color: #000000;
     clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
     height: auto;
     padding: 5px 0px;
@@ -424,7 +438,7 @@ button {
 
 .main {
     flex: 1;
-    margin: 0px 30px;
+    margin: 10px 30px;
     display: inline-block;
     order: 2;
 }
