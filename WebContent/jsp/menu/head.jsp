@@ -82,7 +82,7 @@
 							<a href="/SemiColon/EduMain.do">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
-							src="<%=request.getContextPath()%>/images/toggle-icon.png"></span>
+							src="/SemiColon/images/toggle-icon.png"></span>
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button"
 								id="dropdownMenuButton" data-toggle="dropdown"
