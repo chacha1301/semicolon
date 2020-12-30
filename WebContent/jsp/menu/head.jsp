@@ -53,9 +53,9 @@
 							<div class="custom_menu">
 								<ul>
 									<li><a href="/SemiColon/HomeController.do">HOME</a></li>
-									<li><a href="EduMain.do">EDU</a></li>
-									<li><a href="BoardList.do">COMMUNITY</a></li>
-									<li><a href="BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+									<li><a href="/SemiColon/EduMain.do">EDU</a></li>
+									<li><a href="/SemiColon/BoardList.do">COMMUNITY</a></li>
+									<li><a href="/SemiColon/BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 									<li><a class="it_tag">IT의 시작은 세미콜론에서🤑</a></li>
 								</ul>
 							</div>

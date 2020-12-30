@@ -35,7 +35,7 @@
 				id : id
 			},
 			success : function(result) {
-				if (!form.mid.value) {
+				if (!id) {
 					alert("아이디를 입력하세요.");
 				} else if (result == 1) {
 					alert("사용할 수 있는 아이디입니다.");
@@ -52,8 +52,10 @@
 
 	function passwordCheck() {
 		var form = document.frm;
+		var password = document.getElementById("password").value;
+		var password2 = document.getElementById("password2").value;
 
-		if (form.password.value != form.password2.value) {
+		if (password != password2) {
 			alert("패스워드가 일치하지 않습니다.");
 		} else {
 			passwordChecked = true;
@@ -62,8 +64,12 @@
 
 	function valueCheck() {
 		let form = document.frm;
+		var id = document.getElementById("mid").value;
+		var name = document.getElementById("name").value;
+		var password = document.getElementById("password").value;
+		var password2 = document.getElementById("password2").value;
 
-		if (!form.mid.value) {
+		if (!id) {
 			alert("아이디를 입력하세요.")
 			return false;
 		}
@@ -73,17 +79,17 @@
 			return false;
 		}
 
-		if (!form.name.value) {
+		if (!name) {
 			alert("이름를 입력하세요.")
 			return false;
 		}
 
-		if (!form.password.value) {
+		if (!password) {
 			alert("비밀번호를 입력하세요.")
 			return false;
 		}
 
-		if (!form.password2.value) {
+		if (!password2) {
 			alert("비밀번호를 한번 더 입력하세요.")
 			return false;
 		}
@@ -133,8 +139,8 @@
 									<label for="email_address"
 										class="col-md-4 col-form-label text-md-right">NAME </label>
 									<div class="col-md-6">
-										<input type="text" id="memberId" class="form-control"
-											placeholder="이름 입력" id="name" name="name" required autofocus>
+										<input type="text" class="form-control" placeholder="이름 입력"
+											id="name" name="name" required autofocus>
 									</div>
 								</div>
 
@@ -142,7 +148,7 @@
 									<label for="password"
 										class="col-md-4 col-form-label text-md-right">Password</label>
 									<div class="col-md-6">
-										<input type="password" id="password" class="form-control"
+										<input type="password" class="form-control"
 											placeholder="비밀번호 입력" id="password" name="password" required>
 									</div>
 								</div>
@@ -153,7 +159,7 @@
 										class="col-md-4 col-form-label text-md-right">Password
 										Confirm </label>
 									<div class="col-md-6">
-										<input type="password" id="Password2" class="form-control"
+										<input type="password" class="form-control"
 											placeholder="비밀번호 재입력" id="password2" name="password2"
 											required autofocus>
 									</div>
