@@ -214,9 +214,11 @@ public class EduDAO extends DAO {
 		return list;
 	}
 
-	private final String edu_search = "SELECT * FROM edu WHERE eduKeyword LIKE ?";
+	private final String edu_search = "SELECT * FROM edu WHERE eduKeyword LIKE ? ";
 
 	public ArrayList<EduVO> searchList(String parameter) {
+
+		System.out.println(parameter);
 		ArrayList<EduVO> list = new ArrayList<EduVO>();
 		try {
 			psmt = conn.prepareStatement(edu_search);

@@ -35,6 +35,13 @@
 	media="screen">
 </head>
 
+<script type="text/javascript">
+	function SearchData() {
+		var data = document.frm.search.value;
+		location.href = "/SemiColon/EduSearch.do?search=" + data;
+	}
+</script>
+
 <body>
 	<div class="cotainer">
 		<div class="banner_bg_main">
@@ -79,7 +86,8 @@
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
 								onclick="closeNav()">&times;</a> <a href="HomeController.do">Home</a>
-							<a href="/SemiColon/EduMain.do">EDU</a> <a href="/SemiColon/BoardList.do">COMMUNITY</a>
+							<a href="/SemiColon/EduMain.do">EDU</a> <a
+								href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
 						<span class="toggle_icon" onclick="openNav()"><img
 							src="/SemiColon/images/toggle-icon.png"></span>
@@ -103,15 +111,14 @@
 						</div>
 						<div class="main">
 							<!-- Another variation with a button -->
-							<form action="/SemiColon/EduSearch.do" method="get">
+							<form id="frm" name="frm" method="post">
 								<div class="input-group">
 									<input id="search" name="search" type="text"
-										class="form-control" placeholder="원하는 IT 강좌를 입력해주세요."
-										value="${search }">
+										class="form-control" placeholder="원하는 IT 강좌를 입력해주세요.">
 									<div class="input-group-append">
 										<button class="btn btn-secondary" type="button"
-											style="background-color: #f26522; border-color: #f26522"
-											onclick="location.href='/SemiColon/EduSearch.do'">
+											onclick="SearchData()"
+											style="background-color: #f26522; border-color: #f26522">
 											<i class="fa fa-search"></i>
 										</button>
 									</div>
