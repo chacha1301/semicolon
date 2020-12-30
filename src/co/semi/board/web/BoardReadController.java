@@ -28,7 +28,7 @@ public class BoardReadController extends HttpServlet {
 		BoardDAO dao = new BoardDAO();
 		BoardVO vo = new BoardVO();
 
-		vo.setMemberid(request.getParameter("id"));
+		vo.setBoardnumber(Integer.valueOf(request.getParameter("id")));
 		vo = dao.selectRead(vo);
 		request.setAttribute("vo", vo);
 

@@ -22,17 +22,17 @@ public class BoardDeleteController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("utf-8");
-		
+
 		BoardDAO dao = new BoardDAO();
 		BoardVO vo = new BoardVO();
-		
-		vo.setMemberid(request.getParameter("id"));
-		
+
+		vo.setBoardnumber(Integer.valueOf(request.getParameter("id")));
+
 		int n = dao.delete(vo);
-		
-		if(n != 0) {
+
+		if (n != 0) {
 			String viewPage = "BoardList.do";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 			dispatcher.forward(request, response);
@@ -43,7 +43,7 @@ public class BoardDeleteController extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 			dispatcher.forward(request, response);
 		}
-		
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

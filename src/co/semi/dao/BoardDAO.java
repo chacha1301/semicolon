@@ -22,8 +22,8 @@ public class BoardDAO extends DAO {
 	private final String keywordTitleCount = "SELECT count(*) cnt FROM board WHERE boardtitle LIKE ?";
 	private final String keywordIdCount = "SELECT count(*) cnt FROM board WHERE memberid LIKE ?";
 	private final String keywordContentCount = "SELECT count(*) cnt FROM board WHERE boardcontent LIKE ?";
-	private final String hit_update = "UPDATE board set boardhit = boardhit + 1 WHERE memberid=?";
-	private final String board_read = "SELECT * FROM board WHERE memberid=? ";
+	private final String hit_update = "UPDATE board set boardhit = boardhit + 1 WHERE boardnumber=?";
+	private final String board_read = "SELECT * FROM board WHERE boardnumber=? ";
 	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(semi_b_seq.NEXTVAL, ?, ?, ?, ?)";
 
 	public ArrayList<BoardVO> getList(String currentPage, Integer pSize) {
@@ -172,12 +172,12 @@ public class BoardDAO extends DAO {
 	public BoardVO selectRead(BoardVO vo) {
 		try {
 			psmt = conn.prepareStatement(board_read);
-			psmt.setString(1, vo.getMemberid());
+			psmt.setInt(1, vo.getBoardnumber());
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				
 				psmt = conn.prepareStatement(hit_update);
-				psmt.setString(1, vo.getMemberid());
+				psmt.setInt(1, vo.getBoardnumber());
 				psmt.executeUpdate();
 
 				vo.setBoardnumber(rs.getInt("boardnumber"));
@@ -196,13 +196,13 @@ public class BoardDAO extends DAO {
 		return vo;
 	}
 
-	private final String board_delete = "DELETE FROM board WHERE memberid=?";
+	private final String board_delete = "DELETE FROM board WHERE boardnumber=?";
 
 	public int delete(BoardVO vo) {
 		int n = 0;
 		try {
 			psmt = conn.prepareStatement(board_delete);
-			psmt.setString(1, vo.getMemberid());
+			psmt.setInt(1, vo.getBoardnumber());
 			n = psmt.executeUpdate();
 			System.out.println(n + "건이 삭제되었습니다.");
 		} catch (SQLException e) {

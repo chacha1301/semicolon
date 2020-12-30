@@ -22,7 +22,7 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<h1 class="fashion_taital">찾으시는 강좌가 있나요? <span
-									style="color: red; font-size: 15px;">READY!!</span></h1>
+									style="color: red; font-size: 15px;">Fighting!!</span></h1>
 							<div class="fashion_section_2">
 								<div class="row">
 									<div class="row row-cols-1 row-cols-md-3 g-4">

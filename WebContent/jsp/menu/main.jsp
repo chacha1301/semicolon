@@ -58,7 +58,7 @@
 					<div class="carousel-item active">
 						<div class="container">
 							<h1 class="fashion_taital">
-								인기강좌, 여기서 시작해 보세요! 🏃🏻‍♀️<span
+								인기강의, 여기서 시작해 보세요! 🏃🏻‍♀️<span
 									style="color: red; font-size: 15px;">READY!!</span>
 							</h1>
 							<div class="fashion_section_2">

@@ -106,7 +106,8 @@
 							<form action="/SemiColon/EduSearch.do" method="get">
 								<div class="input-group">
 									<input id="search" name="search" type="text"
-										class="form-control" placeholder="원하는 IT 강좌를 입력해주세요." value="${search }">
+										class="form-control" placeholder="원하는 IT 강좌를 입력해주세요."
+										value="${search }">
 									<div class="input-group-append">
 										<button class="btn btn-secondary" type="button"
 											style="background-color: #f26522; border-color: #f26522"

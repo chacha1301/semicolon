@@ -33,8 +33,8 @@ public class LoginController extends HttpServlet {
 		vo.setPassword(request.getParameter("password"));
 
 		vo = dao.login(vo);
-
-		if (vo.getMemberAuth() != "") {
+		System.out.println(vo.getMemberAuth());
+		if (vo.getMemberAuth() != null) {
 			session.setAttribute("id", vo.getMemberId());
 			session.setAttribute("auth", vo.getMemberAuth());
 			session.setAttribute("name", vo.getMemberName());

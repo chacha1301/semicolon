@@ -36,7 +36,7 @@
 													<img class="card-img-top" src="images/${vo_p.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_p.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_p.eduTitle }</h5>
 														<h5 class="card-text">${vo_p.eduLecturer }</h5>
 														<h5 class="card-text">난이도 : ${vo_p.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_p.eduPrice }</a>
@@ -72,7 +72,7 @@
 													<img class="card-img-top" src="images/${vo_n.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_n.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_n.eduTitle }</h5>
 														<h5 class="card-text">${vo_n.eduLecturer }</h5>
 														<h5 class="card-text">${vo_n.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_n.eduPrice }</a>
@@ -108,7 +108,7 @@
 													<img class="card-img-top" src="images/${vo_d.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_d.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_d.eduTitle }</h5>
 														<h5 class="card-text">${vo_d.eduLecturer }</h5>
 														<h5 class="card-text">${vo_d.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_d.eduPrice }</a>
@@ -144,7 +144,7 @@
 													<img class="card-img-top" src="images/${vo_s.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_s.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_s.eduTitle }</h5>
 														<h5 class="card-text">${vo_s.eduLecturer }</h5>
 														<h5 class="card-text">${vo_s.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_s.eduPrice }</a>
@@ -180,7 +180,7 @@
 													<img class="card-img-top" src="images/${vo_c.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_c.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_c.eduTitle }</h5>
 														<h5 class="card-text">${vo_c.eduLecturer }</h5>
 														<h5 class="card-text">${vo_c.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_c.eduPrice }</a>
@@ -216,7 +216,7 @@
 													<img class="card-img-top" src="images/${vo_l.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo_l.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo_l.eduTitle }</h5>
 														<h5 class="card-text">${vo_l.eduLecturer }</h5>
 														<h5 class="card-text">${vo_l.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo_l.eduPrice }</a>

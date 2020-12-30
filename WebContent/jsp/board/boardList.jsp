@@ -90,24 +90,24 @@
 						<c:forEach var="vo" items="${list }">
 							<tbody>
 								<tr class="rows">
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.boardnumber}'">
 										${vo.boardnumber}</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.boardnumber}'">
 										${vo.boardtitle}</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.boardnumber}'">
 										${vo.memberid}</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.boardnumber}'">
 										${vo.boarddate }</td>
-									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.memberid}'">
+									<td onclick="location.href='/SemiColon/BoardRead.do?id=${vo.boardnumber}'">
 										${vo.boardhit }</td>
 									<td align="center">
 										<c:if test="${vo.memberid eq session_id }">
 											<a class="btn btn-default"
-												onclick="location.href='/SemiColon/BoardEditBefore.do?id=${vo.memberid}'">
+												onclick="location.href='/SemiColon/BoardEditBefore.do?id=${vo.boardnumber}'">
 												<em class="fa fa-pencil"></em>
 											</a>
 											<a class="btn btn-danger"
-												onclick="location.href='/SemiColon/BoardDelete.do?id=${vo.memberid}'"><em
+												onclick="location.href='/SemiColon/BoardDelete.do?id=${vo.boardnumber}'"><em
 													class="fa fa-trash"></em></a>
 										</c:if>
 									</td>
