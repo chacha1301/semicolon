@@ -52,7 +52,7 @@
 						<div class="col-sm-12">
 							<div class="custom_menu">
 								<ul>
-									<li><a href="HomeController.do">HOME</a></li>
+									<li><a href="/SemiColon/HomeController.do">HOME</a></li>
 									<li><a href="EduMain.do">EDU</a></li>
 									<li><a href="BoardList.do">COMMUNITY</a></li>
 									<li><a href="BoardList.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -85,7 +85,7 @@
 					<div class="containt_main">
 						<div id="mySidenav" class="sidenav">
 							<a href="javascript:void(0)" class="closebtn"
-								onclick="closeNav()">&times;</a> <a href="HomeController.do">Home</a>
+								onclick="closeNav()">&times;</a> <a href="/SemiColon/HomeController.do">Home</a>
 							<a href="/SemiColon/EduMain.do">EDU</a> <a
 								href="/SemiColon/BoardList.do">COMMUNITY</a>
 						</div>
@@ -131,7 +131,7 @@
 									<c:choose>
 										<c:when test="${id eq null }">
 											<li><a href="/SemiColon/jsp/member/signUp.jsp"> <i
-													class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+													class="fa fa-user" aria-hidden="true"></i> <span
 													class="padding_10">SIGNUP</span>
 											</a></li>
 											<li><a href="/SemiColon/jsp/member/login.jsp"> <i
@@ -145,6 +145,10 @@
 											<li><a href="/SemiColon/Logout.do"> <i
 													class="fa fa-user" aria-hidden="true"></i> <span
 													class="padding_10">LOGOUT</span></a></li>
+											<li><a href="#"> <i
+													class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+													class="padding_10">CART</span>
+											</a></li>
 										</c:otherwise>
 									</c:choose>
 								</ul>
