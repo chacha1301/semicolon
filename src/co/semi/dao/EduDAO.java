@@ -214,7 +214,7 @@ public class EduDAO extends DAO {
 		return list;
 	}
 
-	private final String edu_search = "SELECT * FROM edu WHERE eduKeyword LIKE ? ";
+	private final String edu_search = "SELECT * FROM edu WHERE eduKeyword LIKE ? OR edutitle LIKE ? OR eduskill LIKE ?";
 
 	public ArrayList<EduVO> searchList(String parameter) {
 
@@ -223,6 +223,8 @@ public class EduDAO extends DAO {
 		try {
 			psmt = conn.prepareStatement(edu_search);
 			psmt.setString(1, "%" + parameter + "%");
+			psmt.setString(2, "%" + parameter + "%");
+			psmt.setString(3, "%" + parameter + "%");
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				EduVO vo = new EduVO();
