@@ -34,7 +34,7 @@
 													<img class="card-img-top" src="images/${vo1.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo1.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo1.eduTitle }</h5>
 														<h5 class="card-text">${vo1.eduLecturer }</h5>
 														<h5 class="card-text">난이도 : ${vo1.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">${vo1.eduPrice }</a>
@@ -66,11 +66,11 @@
 									<div class="row row-cols-1 row-cols-md-3 g-4">
 										<c:forEach var="vo1" items="${listGood }">
 											<div class="fuck">
-												<div class="card" style="width: 18rem;" onclick="location.href='/SemiColon/EduRead.do?id=${vo1.eduNumber}'">
+												<div class="card" style="width: 18rem; height: 25rem" onclick="location.href='/SemiColon/EduRead.do?id=${vo1.eduNumber}'">
 													<img class="card-img-top" src="images/${vo1.eduImg}"
 														alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title">${vo1.eduTitle }</h5>
+														<h5 class="card-title" style="height: 60px">${vo1.eduTitle }</h5>
 														<h5 class="card-text">${vo1.eduLecturer }</h5>
 														<h5 class="card-text">${vo1.eduDifficulty }</h5>
 														<a href="#" class="btn btn-primary">$ ${vo1.eduPrice }</a>
