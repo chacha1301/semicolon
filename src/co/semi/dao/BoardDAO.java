@@ -24,7 +24,7 @@ public class BoardDAO extends DAO {
 	private final String keywordContentCount = "SELECT count(*) cnt FROM board WHERE boardcontent LIKE ?";
 	private final String hit_update = "UPDATE board set boardhit = boardhit + 1 WHERE boardnumber=?";
 	private final String board_read = "SELECT * FROM board WHERE boardnumber=? ";
-	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(b_seq.NEXTVAL, ?, ?, ?, ?)";
+	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(semi_b_seq.NEXTVAL, ?, ?, ?, ?)";
 	private final String board_update = "UPDATE BOARD SET BOARDCONTENT=?,BOARDTITLE=? WHERE BOARDNUMBER=?";
 	
 	
