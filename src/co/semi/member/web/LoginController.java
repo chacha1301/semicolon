@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet {
 			session.setAttribute("id", vo.getMemberId());
 			session.setAttribute("auth", vo.getMemberAuth());
 			session.setAttribute("name", vo.getMemberName());
+			session.setAttribute("password", vo.getPassword());
 		}
 
 //		String viewPage = "/jsp/menu/main.jsp";

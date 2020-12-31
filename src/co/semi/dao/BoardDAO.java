@@ -24,8 +24,10 @@ public class BoardDAO extends DAO {
 	private final String keywordContentCount = "SELECT count(*) cnt FROM board WHERE boardcontent LIKE ?";
 	private final String hit_update = "UPDATE board set boardhit = boardhit + 1 WHERE boardnumber=?";
 	private final String board_read = "SELECT * FROM board WHERE boardnumber=? ";
-	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(semi_b_seq.NEXTVAL, ?, ?, ?, ?)";
-
+	private final String board_insert = "INSERT INTO board(boardnumber, boardtitle, boarddate, boardcontent, memberid) VALUES(b_seq.NEXTVAL, ?, ?, ?, ?)";
+	private final String board_update = "UPDATE BOARD SET BOARDCONTENT=?,BOARDTITLE=? WHERE BOARDNUMBER=?";
+	
+	
 	public ArrayList<BoardVO> getList(String currentPage, Integer pSize) {
 
 		int pNum = Integer.parseInt(currentPage);
@@ -210,5 +212,46 @@ public class BoardDAO extends DAO {
 		}
 
 		return n;
+	}
+	//UPDATE BOARD SET BOARDCONTENT=?,BOARDTITLE=? WHERE BOARDNUMBER=?
+	public int update(BoardVO vo) {
+		int n=0;
+		try {
+			psmt = conn.prepareStatement(board_update);
+			psmt.setString(1, vo.getBoardcontent());
+			psmt.setString(2, vo.getBoardtitle());
+			psmt.setInt(3, vo.getBoardnumber());
+			n= psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return n;
+		
+	}
+private String selectOne = "select * from board where boardnumber=?";
+	public BoardVO selectSearch(BoardVO vo) {
+		try {
+			psmt=conn.prepareStatement(selectOne);
+			psmt.setInt(1, vo.getBoardnumber());
+			rs=psmt.executeQuery();
+			if(rs.next()) {
+				vo.setBoardnumber(rs.getInt("boardnumber"));
+				vo.setBoardtitle(rs.getString("boardtitle"));
+				vo.setBoardwriter(rs.getString("boardwriter"));
+				vo.setBoardcontent(rs.getString("boardcontent"));
+				vo.setBoarddate(rs.getDate("boarddate"));
+				vo.setBoardfile(rs.getString("boardfile"));
+				vo.setBoardhit(rs.getInt("boardhit"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		
+		return vo;
 	}
 }

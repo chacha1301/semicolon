@@ -10,7 +10,7 @@
 	<title>inputError.jsp</title>
 </head>
 
-<body>z
+<body>
 	<div align="center">
 		<p>&nbsp;
 			<p />

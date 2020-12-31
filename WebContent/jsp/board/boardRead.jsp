@@ -4,89 +4,117 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="/jsp/menu/head.jsp" />
+<style>
+div.padding {
+	padding-left: 5%;
+}
 
+h4.refont {
+	font-size: 25px;
+}
+div.input-group>.form-control {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 92%;
+    margin-bottom: 0;
+}
+</style>
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
 <head>
 <meta charset="UTF-8">
 <title>boardRead.jsp</title>
+
 </head>
 
 <body>
-	<div align="center">
-		<p>&nbsp;
-		<p />
-		<p>&nbsp;
-		<p />
-		<h1 style="font-size: 30px; font-weight: bold">QnA<span
-									style="color: red; font-size: 30px;">?</span></h1>
-
+	<div class="padding">
+		<div align="left">
+			<p>&nbsp;
+			<p />
+			<p>&nbsp;
+			<p />
+			<h1 style="font-size: 30px; font-weight: bold">
+				<span style="color: red; font-size: 30px;">?</span>QnA<span
+					style="color: red; font-size: 30px;">!</span>
+			</h1>
+		</div>
 	</div>
-
-	<section class="main-content  py-4 mb-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row mb-3">
-						<div class="col-md-12">
-							<div class="">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-md-12" align="center">
-											<P style="font-size: 20px; font-weight: bold">TITLE</P>
-											<h4>${vo.boardtitle }</h4>
-											<br>
-											<hr>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12" align="center">
-											<P style="font-size: 20px; font-weight: bold">CONTENT</p>
-											<h4>${vo.boardcontent }</h4>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<div class="col-md-12" align="center">
-							<div class="card">
-								<div class="card-body">
-									<P style="font-size: 20px; font-weight: bold">WRITER</p>
-									<h4>${vo.memberid }</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<div class="col-md-12" align="center">
-							<div class="card">
-								<div class="card-body">
-									<P style="font-size: 20px; font-weight: bold">DATE</p>
-									<h4>${vo.boarddate }</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<div class="col-md-12" align="center">
-							<div class="card">
-								<div class="card-body">
-									<textarea rows="5" cols=120 style="border: none"></textarea><br>
-									<button type="button" class="btn btn-sm btn-primary2 btn-create" >&nbsp;답변쓰기&nbsp;</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div align="center">
-						<p>&nbsp;
-						<p />
-						<button type="button" class="btn btn-sm btn-primary btn-create"
+	<hr>
+	<br>
+	<br>
+	<div>
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default panel-table">
+				<div class="panel-heading">
+					<h4 style="font-size: 20px; font-weight: bold">TITLE :
+						${vo.boardtitle }</h4>
+				</div>
+				<div class="panel-body">
+					<h4 style="font-size: 20px; font-weight: bold">CONTENT :</h4>
+					<h4 class="refont">${vo.boardcontent }</h4>
+				</div>
+				<div class="panel-footer">
+					<h4 style="font-size: 20px; font-weight: bold">WRITER & DATE :
+						&nbsp;&nbsp;${vo.memberid }&nbsp;&nbsp;(${vo.boarddate })</h4>
+					<div align="right">
+						<button type="button" class="btn btn-default"
 							onclick="location.href='/SemiColon/BoardList.do'">&nbsp;&nbsp;List&nbsp;&nbsp;</button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+		<p>
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default panel-table">
+				<div class="panel-heading">
+					<h4 style="font-size: 20px; font-weight: bold">COMMENT</h4>
+				</div>
+				<div class="panel-body">
+					<h4 class="refont">
+						<%-- ${vo.replecontent } --%>
+						댓글본문
+					</h4>
+				</div>
+				<div class="panel-footer">
+					<h4 style="font-size: 20px; font-weight: bold">WRITER & DATE :
+						댓글작성자</h4>
+					<div align="right">
+						<%-- <c:if test="${vo.memberid eq ${vo.repleid }" > --%>
+							<button type="button" class="btn btn-default"
+								onclick="location.href='#'">
+								<em class="fa fa-pencil">&nbsp;Edit</em>
+							</button>
+							<button type="button" class="btn btn-danger"
+								onclick="location.href='#'">
+								<em class="fa fa-trash"> &nbsp;Del</em>
+							</button>
+						<%-- </c:if> --%>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="col-md-10 col-md-offset-1" align="center">
+			<div class="panel panel-default panel-table">
+				<div class="card">
+					<div class="card-body">
+						<textarea rows="3" cols=120 style="border: none"></textarea>
+						<br>
+						<button type="button" class="btn btn-sm btn-primary2 btn-create">&nbsp;답변쓰기&nbsp;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br>
+
+
+	</div>
 	<div align="center">
 		<p>&nbsp;
 		<p />
