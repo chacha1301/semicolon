@@ -138,7 +138,7 @@ padding-left: 5%;
 				</div>
 				<div class="panel-footer">
 					<div class="row">
-						<div class="col col-xs-4">TotalPage ${totalCount }</div>
+						<div class="col col-xs-4">TotalCount ${totalCount }</div>
 						<div class="col col-xs-8">
 							<ul class="pagination hidden-xs pull-right">
 								<li><a href="javascript:goPage(${params.finalPageNo})">>></a></li>

@@ -12,12 +12,13 @@ div.padding {
 h4.refont {
 	font-size: 25px;
 }
+
 div.input-group>.form-control {
-    position: relative;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    width: 92%;
-    margin-bottom: 0;
+	position: relative;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	width: 92%;
+	margin-bottom: 0;
 }
 </style>
 <script
@@ -26,6 +27,14 @@ div.input-group>.form-control {
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
+<style>
+textarea {
+	border: 1px solid #999999;
+	width: 100%;
+	margin: 5px 0;
+	padding: 3px;
+}
+</style>
 <head>
 <meta charset="UTF-8">
 <title>boardRead.jsp</title>
@@ -45,10 +54,12 @@ div.input-group>.form-control {
 			</h1>
 		</div>
 	</div>
-	<hr>
-	<br>
-	<br>
+	<p>&nbsp;
+	<p />
+	<p>&nbsp;
+	<p />
 	<div>
+
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default panel-table">
 				<div class="panel-heading">
@@ -70,22 +81,25 @@ div.input-group>.form-control {
 			</div>
 		</div>
 		<p>
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default panel-table">
-				<div class="panel-heading">
-					<h4 style="font-size: 20px; font-weight: bold">COMMENT</h4>
-				</div>
-				<div class="panel-body">
-					<h4 class="refont">
-						<%-- ${vo.replecontent } --%>
-						댓글본문
-					</h4>
-				</div>
-				<div class="panel-footer">
-					<h4 style="font-size: 20px; font-weight: bold">WRITER & DATE :
-						댓글작성자</h4>
-					<div align="right">
-						<%-- <c:if test="${vo.memberid eq ${vo.repleid }" > --%>
+		<div id="comment">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default panel-table">
+					<div class="panel-heading">
+						<h4 style="font-size: 20px; font-weight: bold">COMMENT</h4>
+					</div>
+					<div class="panel-body">
+						<h4 class="refont">
+							<%-- ${vo.replecontent } --%>
+							댓글본문
+						</h4>
+					</div>
+					<div class="panel-footer">
+						<h4 style="font-size: 20px; font-weight: bold">WRITER & DATE
+							: 댓글작성자</h4>
+						<%-- ${vo.repleid } --%>
+						<%-- ${vo.repledate } --%>
+						<div align="right">
+							<%--  <c:if test="${vo.memberId eq vo.repleid }" >  --%>
 							<button type="button" class="btn btn-default"
 								onclick="location.href='#'">
 								<em class="fa fa-pencil">&nbsp;Edit</em>
@@ -94,23 +108,39 @@ div.input-group>.form-control {
 								onclick="location.href='#'">
 								<em class="fa fa-trash"> &nbsp;Del</em>
 							</button>
-						<%-- </c:if> --%>
+							<%-- </c:if>  --%>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<br>
-		<div class="col-md-10 col-md-offset-1" align="center">
-			<div class="panel panel-default panel-table">
-				<div class="card">
-					<div class="card-body">
-						<textarea rows="3" cols=120 style="border: none"></textarea>
-						<br>
-						<button type="button" class="btn btn-sm btn-primary2 btn-create">&nbsp;답변쓰기&nbsp;</button>
+		<form id="frm" name="frm" action="/SemiColon/RepleAdd.do"
+			method="post">
+			<div class="col-md-10 col-md-offset-1" align="left">
+				<div class="panel panel-default panel-table">
+					<div class="panel-heading">
+						<h4 style="font-size: 20px; font-weight: bold">COMMENT</h4>
 					</div>
+					<textarea rows="3" cols=100% style="border: none" id="rContent"
+						name="rContent"></textarea>
+					<div class="panel-footer">
+						<h4>
+							아이디: &nbsp;<input type="text" id="rId" name="rId">&nbsp;비밀번호:
+							&nbsp;<input type="password" id="password" name="password">
+						</h4>
+						<div align="right">
+							<button type="submit" class="btn btn-default"
+								onclick="/SemiColon/RepleAdd.do">
+								<em class="fa fa-pencil">&nbsp;Reple&nbsp;</em>
+							</button>
+						</div>
+					</div>
+					<input type="hidden" id="Id" name="Id" value="${vo.boardnumber }">
+
 				</div>
 			</div>
-		</div>
+		</form>
 		<br> <br>
 
 

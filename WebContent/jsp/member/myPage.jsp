@@ -16,30 +16,51 @@
 <link rel="icon" href="Favicon.png">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<style>
+div.padding {
+	padding-left: 5%;
+}
+div.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 90%;
+    margin-bottom: 0;
+}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container">
-	<div align="center">
+	<div align="left" class="padding">
 		<p>&nbsp;
 		<p />
 		<p>&nbsp;
 		<p />
 		<h1 style="font-size: 30px; font-weight: bold">MyPage</h1>
+		<p>&nbsp;
+		<p />
+		<p>&nbsp;
+		<p />
 	</div>
-		<section class="main-content  py-4 mb-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1" align="left">
+			<div class="panel panel-default panel-table">
+				<div class="panel-heading">
+					<h4 style="font-size: 20px; font-weight: bold">ID: ${id }</h4>
+				</div>
+				<div class="panel-body">
 					<br>
-					<br>
-						<hr>
-						<br>
-						<h5>이름: ${name }</h5>
-						<h5>아이디: ${id}</h5>
-						<h5>비밀번호: ${password}</h5>
-						<h5>수강중인 강좌:</h5>
-						<c:if test="${vo.eduState eq 1}">
+					<h5>이름: ${name }</h5>
+					<h5>아이디: ${id}</h5>
+					<h5>비밀번호: ${password}</h5>
+					<h5>수강중인 강좌:</h5>
+					<c:if test="${vo.eduState eq 1}">
 						<c:forEach var="vo" items="${list }">
 							<div class="fuck">
 								<div class="card" style="width: 18rem; height: 25rem"
@@ -53,14 +74,15 @@
 										<a href="#" class="btn btn-primary">$ ${vo.eduPrice }</a>
 									</div>
 								</div>
+
 								&nbsp;
 							</div>
 						</c:forEach>
-						</c:if>
-					</div>
+					</c:if>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
 	</div>
 </body>
 <jsp:include page="../menu/footer.jsp" />

@@ -20,6 +20,12 @@ div.input-group>.form-control {
 	width: 92%;
 	margin-bottom: 0;
 }
+textarea {
+	border: 1px solid #999999;
+	width: 100%;
+	margin: 5px 0;
+	padding: 3px;
+}
 </style>
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -52,7 +58,7 @@ div.input-group>.form-control {
 				<div class="panel-body">
 					<P style="font-size: 20px; font-weight: bold">CONTENT</p>
 					<h4>
-						<textarea id="bContent" name="bContent" rows="10" cols="100%">${vo.boardcontent }</textarea>
+						<textarea id="bContent" name="bContent" rows="10" cols=>${vo.boardcontent }</textarea>
 					</h4>
 				</div>
 				<div class="panel-footer">
